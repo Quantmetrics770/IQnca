@@ -1,0 +1,37 @@
+********** MODEL NAME
+
+modelPKPD
+
+********** MODEL NOTES
+
+Example model to re-implement PopED example ex.3.a.PKPD.1.comp...
+One compartment first order absorption + inhibitory imax
+
+********** MODEL STATES
+
+d/dt(Ad) = -KA*Ad + Favail*INPUT1
+d/dt(Ac) =  KA*Ad - CL/V*Ac
+
+********** MODEL PARAMETERS
+
+KA       = 1   
+CL       = 3   
+V        = 60  
+IMAX     = 1
+IC50     = 1
+E0       = 1
+Favail   = 1
+
+********** MODEL VARIABLES
+
+CONC     = Ac/V
+EFF      = E0*(1 - CONC*IMAX/(IC50+CONC))
+
+OUTPUT1  = CONC
+OUTPUT2  = EFF
+
+********** MODEL REACTIONS
+
+********** MODEL FUNCTIONS
+
+********** MODEL EVENTS

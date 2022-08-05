@@ -1,0 +1,67 @@
+
+!LANDSCAPE
+
+
+#* Listing 2.2 Actual Sampling time
+!BLOCKSTART[keepNext](indiv3_1)
+**Listing 2.2-1 Actual Sampling time of Drug B - Single IV Infusion Dose (SD) (1 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]    |      |      |       |       |       |       |        |        |        |
+| ------------- | ----------- | ------------------- | ---- | ---- | ----- | ----- | ----- | ----- | ------ | ------ | ------ |
+|               |             | 0                   | 0.5  | 2    | 8     | 24    | 48    | 72    | 168    | 240    | 336    |
+| **Treatment** | **Subject** | **Actual Time [h]** |      |      |       |       |       |       |        |        |        |
+| 300mg/m2      | 1           | -1.83               | 0.58 | 1.92 | 7.8   | 25.25 | 49.08 | 76.28 | 193.33 | 244.42 | 358.1  |
+|               | 2           | -2.12               | 0.55 | 2.12 | 8     | 24.92 | 48.67 | 77.3  | 169.07 | 241.75 | 360.17 |
+|               | 3           | -0.27               | 0.52 | 2.08 | 10.08 | 26.6  | 50.93 | 74.07 | 170.5  | 242.95 | 340.68 |
+{NS: No Sample.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_times.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv3_1)
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](indiv3_1)
+**Listing 2.2-1 Actual Sampling time of Drug B - Single IV Infusion Dose (SD) (2 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]    |        |
+| ------------- | ----------- | ------------------- | ------ |
+|               |             | 672                 | 1008   |
+| **Treatment** | **Subject** | **Actual Time [h]** |        |
+| 300mg/m2      | 1           | 699.05              | 1055.4 |
+|               | 2           | 694.02              | 1029.9 |
+|               | 3           | 675.08              | 1014.4 |
+{NS: No Sample.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_times.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv3_1)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](indiv3_2)
+**Listing 2.2-2 Actual Sampling time of Drug B - Single IV Infusion Dose (SD) (1 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]    |     |      |       |       |       |       |        |        |        |
+| ------------- | ----------- | ------------------- | --- | ---- | ----- | ----- | ----- | ----- | ------ | ------ | ------ |
+|               |             | 0                   | 0.5 | 2    | 8     | 24    | 48    | 72    | 168    | 240    | 336    |
+| **Treatment** | **Subject** | **Actual Time [h]** |     |      |       |       |       |       |        |        |        |
+| 400mg/m2      | 4           | -1.62               | 0.5 | 2.63 | 10.58 | 27.17 | 48.25 | 71.08 | 167.75 | 239.33 | 335.53 |
+|               | 6           | -2.75               | 0.5 | 2.42 | 8     | 23    | 46.67 | 70.58 | 168.25 | NS     | 360.5  |
+{NS: No Sample.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_times.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv3_2)
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](indiv3_2)
+**Listing 2.2-2 Actual Sampling time of Drug B - Single IV Infusion Dose (SD) (2 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]    |        |        |
+| ------------- | ----------- | ------------------- | ------ | ------ |
+|               |             | 672                 | 1008   | 1104   |
+| **Treatment** | **Subject** | **Actual Time [h]** |        |        |
+| 400mg/m2      | 4           | 671.5               | 1008   | 1103.6 |
+|               | 6           | 698.33              | 1198.8 | NS     |
+{NS: No Sample.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_times.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv3_2)
+
+

@@ -1,0 +1,21 @@
+DESCRIPTION:
+Gompertz model for time-to-event data.
+Te is the scale parameter (characteristic time) and k is the shape parameter.
+Initialization: Te = time at which survival S=0.5, k = 0.01 - 1
+
+[LONGITUDINAL]
+input = {Te,k}
+
+EQUATION:
+; re-parameterization
+Teprime = Te / log(1+log(2)/k)
+
+; hazard
+h = k/Teprime * exp(t/Teprime)
+
+DEFINITION:
+Event = {type=event, maxEventNumber=1, hazard=h}
+
+OUTPUT:
+output = {Event}
+

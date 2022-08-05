@@ -1,0 +1,18 @@
+<TT>   Population parameter estimates                                              
+       ============================================================================
+
+<TH>   PARAMETER                        | VALUE     | RSE   | SHRINKAGE | COMMENT  
+       ----------------------------------------------------------------------------
+<TR>   **Typical parameters**           |           |       |           |          
+<TR>   Te                               | 52.1      | 8.4%  | -         | -        
+<TR>   p                                | 14.7      | 8.94% | -         | -        
+<TR>                                    |           |       |           |          
+<TR>   **Inter-individual variability** |           |       |           |          
+<TR>   omega(Te)                        | 0.647     | 11.3% | 27.9%     | LogNormal
+<TR>   omega(p)                         | 0.2 (FIX) | -     | 90.7%     | LogNormal
+<TR>                                    |           |       |           |          
+<TR>   Objective function               | 465       | -     | -         | -        
+<TR>   AIC                              | 471       | -     | -         | -        
+<TR>   BIC                              | 479       | -     | -         | -        
+       ----------------------------------------------------------------------------
+<TF>    Model: material/01-04a-X2-TTE/MODEL_01, Significant digits: 3 (Objective function rounded to closest integer value), omega values and error model parameters reported in standard deviation.<br>\* Epsilon shrinkage (records with missing dependent variable and censored records not considered).

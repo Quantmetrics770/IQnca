@@ -1,0 +1,93 @@
+
+!LANDSCAPE
+
+
+#* Table 2.1 Summary statistics for PK concentrations
+!BLOCKSTART[keepNext](table1_1)
+**Table 2.1-1 Summary statistics for PK concentrations of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (1 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |              | Nominal Time [h]          |       |       |       |       |       |       |       |       |       |
+| ------------- | ------------ | ------------------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+|               |              | 0                         | 0.5   | 2     | 8     | 24    | 48    | 72    | 168   | 240   | 336   |
+| **Treatment** | **Stats**    | **Concentration [ug/mL]** |       |       |       |       |       |       |       |       |       |
+| 300mg/m2      | N            | 3                         | 3     | 3     | 3     | 3     | 3     | 3     | 3     | 3     | 3     |
+|               | Mean         | 2.5                       | 25.73 | 108.3 | 85.53 | 76.2  | 68.17 | 61.63 | 48.97 | 39.6  | 33.83 |
+|               | SD           | 0                         | 7.81  | 43.18 | 18.7  | 19.71 | 21.65 | 18.87 | 18.74 | 12.73 | 11.18 |
+|               | Min          | 2.5                       | 17.7  | 75.4  | 64    | 55.2  | 49.1  | 42.3  | 27.5  | 27.4  | 21.3  |
+|               | Median       | 2.5                       | 26.2  | 92.3  | 94.9  | 79.1  | 63.7  | 62.6  | 57.3  | 38.6  | 37.4  |
+|               | Geo-mean     | 2.5                       | 24.9  | 103   | 84.03 | 74.39 | 65.95 | 59.61 | 46.08 | 38.22 | 32.43 |
+|               | Max          | 2.5                       | 33.3  | 157.2 | 97.7  | 94.3  | 91.7  | 80    | 62.1  | 52.8  | 42.8  |
+|               | CV% mean     | 0                         | 30.35 | 39.87 | 21.86 | 25.87 | 31.76 | 30.61 | 38.28 | 32.15 | 33.06 |
+|               | CV% geo-mean | 0                         | 32.73 | 39.36 | 23.96 | 27.81 | 32.17 | 32.99 | 47.25 | 33.71 | 38.32 |
+{NC: Not calculated.<br>Geo-mean: Geometric mean.<br>CV%% mean = coefficient of variation (%%)=SD/mean * 100.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1)) * 100.<br>Lower limit of quantitation: 5 ug/mL. Pre-first dose <LLOQ values were handled as: LLOQ/2. <LLOQ values between >=LLOQ values were handled as: asis. First <LLOQ value post last >= LLOQ was handled as: 0. Second to last First <LLOQ value post last >= LLOQ was handled as: 0.<br>Values in table are reported with 4 significant digits.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/summary_table_conc.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(table1_1)
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](table1_1)
+**Table 2.1-1 Summary statistics for PK concentrations of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (2 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |              | Nominal Time [h]          |       |
+| ------------- | ------------ | ------------------------- | ----- |
+|               |              | 672                       | 1008  |
+| **Treatment** | **Stats**    | **Concentration [ug/mL]** |       |
+| 300mg/m2      | N            | 3                         | 3     |
+|               | Mean         | 18.3                      | 9.467 |
+|               | SD           | 7.269                     | 2.899 |
+|               | Min          | 10.3                      | 7.1   |
+|               | Median       | 20.1                      | 8.6   |
+|               | Geo-mean     | 17.18                     | 9.187 |
+|               | Max          | 24.5                      | 12.7  |
+|               | CV% mean     | 39.72                     | 30.62 |
+|               | CV% geo-mean | 47.85                     | 30.3  |
+{NC: Not calculated.<br>Geo-mean: Geometric mean.<br>CV%% mean = coefficient of variation (%%)=SD/mean * 100.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1)) * 100.<br>Lower limit of quantitation: 5 ug/mL. Pre-first dose <LLOQ values were handled as: LLOQ/2. <LLOQ values between >=LLOQ values were handled as: asis. First <LLOQ value post last >= LLOQ was handled as: 0. Second to last First <LLOQ value post last >= LLOQ was handled as: 0.<br>Values in table are reported with 4 significant digits.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/summary_table_conc.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(table1_1)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](table1_2)
+**Table 2.1-2 Summary statistics for PK concentrations of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (1 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |              | Nominal Time [h]          |        |        |        |        |        |        |        |        |        |
+| ------------- | ------------ | ------------------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+|               |              |   0.0                     |   0.5  |   2.0  |   8.0  |  24.0  |  48.0  |  72.0  | 168.0  | 240.0  | 336.0  |
+| **Treatment** | **Stats**    | **Concentration [ug/mL]** |        |        |        |        |        |        |        |        |        |
+| 400mg/m2      | N            | 2                         | 2      | 2      | 2      | 2      | 2      | 2      | 2      | 1      | 2      |
+|               | Mean         |   2.50                    |  21.90 | 156.10 | 129.20 |  93.20 |  85.35 |  84.10 |  58.40 |  51.10 |  41.35 |
+|               | SD           | 0                         | 0.9899 | 14.57  | 5.374  | 4.808  | 3.889  | 5.374  | 5.091  | NC     | 9.405  |
+|               | Min          |   2.5                     |  21.2  | 145.8  | 125.4  |  89.8  |  82.6  |  80.3  |  54.8  |  51.1  |  34.7  |
+|               | Median       |   2.50                    |  21.90 | 156.10 | 129.20 |  93.20 |  85.35 |  84.10 |  58.40 |  51.10 |  41.35 |
+|               | Geo-mean     |   2.50                    |  21.89 | 155.80 | 129.10 |  93.14 |  85.31 |  84.01 |  58.29 |  51.10 |  40.81 |
+|               | Max          |   2.5                     |  22.6  | 166.4  | 133.0  |  96.6  |  88.1  |  87.9  |  62.0  |  51.1  |  48.0  |
+|               | CV% mean     | 0                         | 4.52   | 9.331  | 4.159  | 5.159  | 4.557  | 6.39   | 8.718  | NC     | 22.74  |
+|               | CV% geo-mean | 0                         | 4.524  | 9.365  | 4.162  | 5.165  | 4.561  | 6.401  | 8.745  | NC     | 23.25  |
+{NC: Not calculated.<br>Geo-mean: Geometric mean.<br>CV%% mean = coefficient of variation (%%)=SD/mean * 100.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1)) * 100.<br>Lower limit of quantitation: 5 ug/mL. Pre-first dose <LLOQ values were handled as: LLOQ/2. <LLOQ values between >=LLOQ values were handled as: asis. First <LLOQ value post last >= LLOQ was handled as: 0. Second to last First <LLOQ value post last >= LLOQ was handled as: 0.<br>Values in table are reported with 4 significant digits.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/summary_table_conc.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(table1_2)
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](table1_2)
+**Table 2.1-2 Summary statistics for PK concentrations of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (2 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |              | Nominal Time [h]          |       |       |
+| ------------- | ------------ | ------------------------- | ----- | ----- |
+|               |              |  672                      | 1008  | 1104  |
+| **Treatment** | **Stats**    | **Concentration [ug/mL]** |       |       |
+| 400mg/m2      | N            | 2                         | 2     | 1     |
+|               | Mean         | 19.15                     |  2.25 |  0.00 |
+|               | SD           | 7.99                      | 3.182 | NC    |
+|               | Min          | 13.5                      |  0.0  |  0.0  |
+|               | Median       | 19.15                     |  2.25 |  0.00 |
+|               | Geo-mean     | 18.3                      | NC    | NC    |
+|               | Max          | 24.8                      |  4.5  |  0.0  |
+|               | CV% mean     | 41.72                     | 141.4 | NC    |
+|               | CV% geo-mean | 45.07                     | NC    | NC    |
+{NC: Not calculated.<br>Geo-mean: Geometric mean.<br>CV%% mean = coefficient of variation (%%)=SD/mean * 100.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1)) * 100.<br>Lower limit of quantitation: 5 ug/mL. Pre-first dose <LLOQ values were handled as: LLOQ/2. <LLOQ values between >=LLOQ values were handled as: asis. First <LLOQ value post last >= LLOQ was handled as: 0. Second to last First <LLOQ value post last >= LLOQ was handled as: 0.<br>Values in table are reported with 4 significant digits.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/summary_table_conc.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(table1_2)
+
+

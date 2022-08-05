@@ -1,0 +1,67 @@
+
+!LANDSCAPE
+
+
+#* Listing 2.1 Individual concentration data
+!BLOCKSTART[keepNext](indiv2_1)
+**Listing 2.1-1 Individual concentration data of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (1 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]          |      |       |      |      |      |      |      |      |      |
+| ------------- | ----------- | ------------------------- | ---- | ----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+|               |             | 0                         | 0.5  | 2     | 8    | 24   | 48   | 72   | 168  | 240  | 336  |
+| **Treatment** | **Subject** | **Concentration [ug/mL]** |      |       |      |      |      |      |      |      |      |
+| 300mg/m2      | 1           | BLQ                       | 17.7 | 75.4  | 64   | 55.2 | 49.1 | 42.3 | 27.5 | 27.4 | 21.3 |
+|               | 2           | BLQ                       | 33.3 | 157.2 | 97.7 | 94.3 | 91.7 | 80   | 62.1 | 52.8 | 42.8 |
+|               | 3           | BLQ                       | 26.2 | 92.3  | 94.9 | 79.1 | 63.7 | 62.6 | 57.3 | 38.6 | 37.4 |
+{NS: No Sample.<br>BLQ: Below lower limit of quantitation.<br>Lower limit of quantitation is 5 ug/mL.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_concentrations.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv2_1)
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](indiv2_1)
+**Listing 2.1-1 Individual concentration data of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (2 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]          |      |
+| ------------- | ----------- | ------------------------- | ---- |
+|               |             | 672                       | 1008 |
+| **Treatment** | **Subject** | **Concentration [ug/mL]** |      |
+| 300mg/m2      | 1           | 10.3                      | 7.1  |
+|               | 2           | 24.5                      | 12.7 |
+|               | 3           | 20.1                      | 8.6  |
+{NS: No Sample.<br>BLQ: Below lower limit of quantitation.<br>Lower limit of quantitation is 5 ug/mL.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_concentrations.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv2_1)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](indiv2_2)
+**Listing 2.1-2 Individual concentration data of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (1 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]          |      |       |       |      |      |      |      |      |      |
+| ------------- | ----------- | ------------------------- | ---- | ----- | ----- | ---- | ---- | ---- | ---- | ---- | ---- |
+|               |             | 0                         | 0.5  | 2     | 8     | 24   | 48   | 72   | 168  | 240  | 336  |
+| **Treatment** | **Subject** | **Concentration [ug/mL]** |      |       |       |      |      |      |      |      |      |
+| 400mg/m2      | 4           | BLQ                       | 22.6 | 166.4 | 133   | 96.6 | 88.1 | 80.3 | 54.8 | 51.1 | 34.7 |
+|               | 6           | BLQ                       | 21.2 | 145.8 | 125.4 | 89.8 | 82.6 | 87.9 | 62   | NS   | 48   |
+{NS: No Sample.<br>BLQ: Below lower limit of quantitation.<br>Lower limit of quantitation is 5 ug/mL.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_concentrations.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv2_2)
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](indiv2_2)
+**Listing 2.1-2 Individual concentration data of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (2 of 2)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+|               |             | Nominal Time [h]          |      |      |
+| ------------- | ----------- | ------------------------- | ---- | ---- |
+|               |             | 672                       | 1008 | 1104 |
+| **Treatment** | **Subject** | **Concentration [ug/mL]** |      |      |
+| 400mg/m2      | 4           | 13.5                      | BLQ  | BLQ  |
+|               | 6           | 24.8                      | BLQ  | NS   |
+{NS: No Sample.<br>BLQ: Below lower limit of quantitation.<br>Lower limit of quantitation is 5 ug/mL.<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_concentrations.rmd<br>Execution date: 2022-06-22 14:22:28}
+
+!BLOCKEND(indiv2_2)
+
+

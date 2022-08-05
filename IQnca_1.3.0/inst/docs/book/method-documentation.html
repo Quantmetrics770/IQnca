@@ -1,0 +1,2561 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Method Documentation | _main</title>
+  <meta name="description" content="Documentation of the IQnca R Package." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Method Documentation | _main" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://iqrnca.intiquan.com/" />
+  <meta property="og:image" content="https://iqrnca.intiquan.com//images/cover.png" />
+  <meta property="og:description" content="Documentation of the IQnca R Package." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Method Documentation | _main" />
+  
+  <meta name="twitter:description" content="Documentation of the IQnca R Package." />
+  <meta name="twitter:image" content="https://iqrnca.intiquan.com//images/cover.png" />
+
+<meta name="author" content="IntiQuan GmbH" />
+
+
+<meta name="date" content="2022-06-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="dataspec.html"/>
+<link rel="next" href="support.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1Z3FQJ1YP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N1Z3FQJ1YP');
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://www.intiquan.com" target="_blank"><img src="images/logo.png" width="220px"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>The IQnca R package</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#what"><i class="fa fa-check"></i><b>1.1</b> What?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#why"><i class="fa fa-check"></i><b>1.2</b> Why?</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#validation"><i class="fa fa-check"></i><b>1.3</b> Validation</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#documentation"><i class="fa fa-check"></i><b>1.4</b> Documentation</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#getting-help"><i class="fa fa-check"></i><b>1.5</b> Getting Help</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction.html"><a href="introduction.html#future-iqnca-developments"><i class="fa fa-check"></i><b>1.6</b> Future IQnca Developments</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#easy-installation"><i class="fa fa-check"></i><b>2.1</b> Easy Installation</a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#license"><i class="fa fa-check"></i><b>2.2</b> License</a></li>
+<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#source-code"><i class="fa fa-check"></i><b>2.3</b> Source Code</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>3</b> Workflow</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="workflow.html"><a href="workflow.html#import-data"><i class="fa fa-check"></i><b>3.1</b> Import Data</a></li>
+<li class="chapter" data-level="3.2" data-path="workflow.html"><a href="workflow.html#implement-analysis-plan"><i class="fa fa-check"></i><b>3.2</b> Implement Analysis Plan</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="workflow.html"><a href="workflow.html#ignored-observations"><i class="fa fa-check"></i><b>3.2.1</b> Ignored observations</a></li>
+<li class="chapter" data-level="3.2.2" data-path="workflow.html"><a href="workflow.html#customized-auc-intervals"><i class="fa fa-check"></i><b>3.2.2</b> Customized AUC intervals</a></li>
+<li class="chapter" data-level="3.2.3" data-path="workflow.html"><a href="workflow.html#iqrdatanca-export"><i class="fa fa-check"></i><b>3.2.3</b> <code>IQRdataNCA</code> export</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="workflow.html"><a href="workflow.html#plotcleandata"><i class="fa fa-check"></i><b>3.3</b> Explore and Clean Data</a></li>
+<li class="chapter" data-level="3.4" data-path="workflow.html"><a href="workflow.html#present-analysis-data"><i class="fa fa-check"></i><b>3.4</b> Present Analysis Data</a></li>
+<li class="chapter" data-level="3.5" data-path="workflow.html"><a href="workflow.html#execute-the-nca"><i class="fa fa-check"></i><b>3.5</b> Execute the NCA</a></li>
+<li class="chapter" data-level="3.6" data-path="workflow.html"><a href="workflow.html#present-nca-results"><i class="fa fa-check"></i><b>3.6</b> Present NCA Results</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="workflow.html"><a href="workflow.html#non-calculated-and-unreliably-calculated-pk-parameters"><i class="fa fa-check"></i><b>3.6.1</b> Non calculated and unreliably calculated PK parameters</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="workflow.html"><a href="workflow.html#statistical-analysis"><i class="fa fa-check"></i><b>3.7</b> Statistical Analysis</a></li>
+<li class="chapter" data-level="3.8" data-path="workflow.html"><a href="workflow.html#reporting"><i class="fa fa-check"></i><b>3.8</b> Reporting</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>4</b> Examples</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="examples.html"><a href="examples.html#ex1"><i class="fa fa-check"></i><b>4.1</b> Example 1: Bolus single dose data</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="examples.html"><a href="examples.html#data-preparation"><i class="fa fa-check"></i><b>4.1.1</b> Data preparation</a></li>
+<li class="chapter" data-level="4.1.2" data-path="examples.html"><a href="examples.html#apply-analysis-settings"><i class="fa fa-check"></i><b>4.1.2</b> Apply analysis settings</a></li>
+<li class="chapter" data-level="4.1.3" data-path="examples.html"><a href="examples.html#nca-parameter-calculation"><i class="fa fa-check"></i><b>4.1.3</b> NCA parameter calculation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="examples.html"><a href="examples.html#ex2"><i class="fa fa-check"></i><b>4.2</b> Example 2: Infusion single dose data</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="examples.html"><a href="examples.html#data-preparation-1"><i class="fa fa-check"></i><b>4.2.1</b> Data preparation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="examples.html"><a href="examples.html#blq-data-handling"><i class="fa fa-check"></i><b>4.2.2</b> BLQ data handling</a></li>
+<li class="chapter" data-level="4.2.3" data-path="examples.html"><a href="examples.html#data-listings-and-tables"><i class="fa fa-check"></i><b>4.2.3</b> Data listings and tables</a></li>
+<li class="chapter" data-level="4.2.4" data-path="examples.html"><a href="examples.html#data-plots"><i class="fa fa-check"></i><b>4.2.4</b> Data plots</a></li>
+<li class="chapter" data-level="4.2.5" data-path="examples.html"><a href="examples.html#nca-parameter-calculation-1"><i class="fa fa-check"></i><b>4.2.5</b> NCA parameter calculation</a></li>
+<li class="chapter" data-level="4.2.6" data-path="examples.html"><a href="examples.html#result-listings-and-tables"><i class="fa fa-check"></i><b>4.2.6</b> Result listings and tables</a></li>
+<li class="chapter" data-level="4.2.7" data-path="examples.html"><a href="examples.html#reporting-1"><i class="fa fa-check"></i><b>4.2.7</b> Reporting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="examples.html"><a href="examples.html#ex3"><i class="fa fa-check"></i><b>4.3</b> Example 3: Extravascular first dose and steady state</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="examples.html"><a href="examples.html#data-exploration"><i class="fa fa-check"></i><b>4.3.1</b> Data exploration</a></li>
+<li class="chapter" data-level="4.3.2" data-path="examples.html"><a href="examples.html#nca-parameter-calculation-2"><i class="fa fa-check"></i><b>4.3.2</b> NCA parameter calculation</a></li>
+<li class="chapter" data-level="4.3.3" data-path="examples.html"><a href="examples.html#reporting-2"><i class="fa fa-check"></i><b>4.3.3</b> Reporting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="examples.html"><a href="examples.html#ex4"><i class="fa fa-check"></i><b>4.4</b> Example 4: Single oral dose data</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="examples.html"><a href="examples.html#nca-parameter-calculation-3"><i class="fa fa-check"></i><b>4.4.1</b> NCA parameter calculation</a></li>
+<li class="chapter" data-level="4.4.2" data-path="examples.html"><a href="examples.html#comparison-of-results"><i class="fa fa-check"></i><b>4.4.2</b> Comparison of results</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="examples.html"><a href="examples.html#ex5"><i class="fa fa-check"></i><b>4.5</b> Example 5: Special pre-dose handling</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="examples.html"><a href="examples.html#duplicating-the-pre-dose-records"><i class="fa fa-check"></i><b>4.5.1</b> Duplicating the pre-dose records</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="dataspec.html"><a href="dataspec.html"><i class="fa fa-check"></i><b>5</b> Data Specification</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dataspec.html"><a href="dataspec.html#iqdatanca-function"><i class="fa fa-check"></i><b>5.1</b> IQdataNCA Function</a></li>
+<li class="chapter" data-level="5.2" data-path="dataspec.html"><a href="dataspec.html#iqdatanca-object"><i class="fa fa-check"></i><b>5.2</b> IQdataNCA Object</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="method-documentation.html"><a href="method-documentation.html"><i class="fa fa-check"></i><b>6</b> Method Documentation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="method-documentation.html"><a href="method-documentation.html#grouping-and-profile-differentiation"><i class="fa fa-check"></i><b>6.1</b> Grouping and profile differentiation</a></li>
+<li class="chapter" data-level="6.2" data-path="method-documentation.html"><a href="method-documentation.html#ncamodels"><i class="fa fa-check"></i><b>6.2</b> NCA models</a></li>
+<li class="chapter" data-level="6.3" data-path="method-documentation.html"><a href="method-documentation.html#pre"><i class="fa fa-check"></i><b>6.3</b> Pre-dose data handling</a></li>
+<li class="chapter" data-level="6.4" data-path="method-documentation.html"><a href="method-documentation.html#blqmethods"><i class="fa fa-check"></i><b>6.4</b> BLQ data handling</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="method-documentation.html"><a href="method-documentation.html#for-listings"><i class="fa fa-check"></i><b>6.4.1</b> For Listings</a></li>
+<li class="chapter" data-level="6.4.2" data-path="method-documentation.html"><a href="method-documentation.html#for-summary-tables-and-nca"><i class="fa fa-check"></i><b>6.4.2</b> For Summary Tables and NCA</a></li>
+<li class="chapter" data-level="6.4.3" data-path="method-documentation.html"><a href="method-documentation.html#for-individual-and-summary-plots"><i class="fa fa-check"></i><b>6.4.3</b> For Individual and Summary Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="method-documentation.html"><a href="method-documentation.html#slopecalc"><i class="fa fa-check"></i><b>6.5</b> Terminal slope calculation</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="method-documentation.html"><a href="method-documentation.html#best-slope"><i class="fa fa-check"></i><b>6.5.1</b> Automatic terminal slope selection</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="method-documentation.html"><a href="method-documentation.html#aucmethods"><i class="fa fa-check"></i><b>6.6</b> AUC calculation methods</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="method-documentation.html"><a href="method-documentation.html#auccalc"><i class="fa fa-check"></i><b>6.6.1</b> AUC interval calculus</a></li>
+<li class="chapter" data-level="6.6.2" data-path="method-documentation.html"><a href="method-documentation.html#concinter"><i class="fa fa-check"></i><b>6.6.2</b> Concentration interpolation/extrapolation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="method-documentation.html"><a href="method-documentation.html#OverviewOfNCAParams"><i class="fa fa-check"></i><b>6.7</b> Overview of NCA parameters</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="method-documentation.html"><a href="method-documentation.html#TLST"><i class="fa fa-check"></i><b>6.7.1</b> Last observation defintion</a></li>
+<li class="chapter" data-level="6.7.2" data-path="method-documentation.html"><a href="method-documentation.html#for-all-profile-types"><i class="fa fa-check"></i><b>6.7.2</b> For all profile types</a></li>
+<li class="chapter" data-level="6.7.3" data-path="method-documentation.html"><a href="method-documentation.html#only-for-single-and-first-dose-profiles"><i class="fa fa-check"></i><b>6.7.3</b> Only for single and first dose profiles</a></li>
+<li class="chapter" data-level="6.7.4" data-path="method-documentation.html"><a href="method-documentation.html#only-for-steady-state-profiles"><i class="fa fa-check"></i><b>6.7.4</b> Only for steady-state profiles</a></li>
+<li class="chapter" data-level="6.7.5" data-path="method-documentation.html"><a href="method-documentation.html#formulas"><i class="fa fa-check"></i><b>6.7.5</b> Formulas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="support.html"><a href="support.html"><i class="fa fa-check"></i><b>7</b> Support</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="function-reference.html"><a href="function-reference.html"><i class="fa fa-check"></i><b>A</b> Function Reference</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="function-reference.html"><a href="function-reference.html#general-data-io"><i class="fa fa-check"></i><b>A.1</b> General Data I/O</a></li>
+<li class="chapter" data-level="A.2" data-path="function-reference.html"><a href="function-reference.html#help-documentation"><i class="fa fa-check"></i><b>A.2</b> Help &amp; Documentation</a></li>
+<li class="chapter" data-level="A.3" data-path="function-reference.html"><a href="function-reference.html#installation-1"><i class="fa fa-check"></i><b>A.3</b> Installation</a></li>
+<li class="chapter" data-level="A.4" data-path="function-reference.html"><a href="function-reference.html#nca-data"><i class="fa fa-check"></i><b>A.4</b> NCA Data</a></li>
+<li class="chapter" data-level="A.5" data-path="function-reference.html"><a href="function-reference.html#nca-data-figures"><i class="fa fa-check"></i><b>A.5</b> NCA Data Figures</a></li>
+<li class="chapter" data-level="A.6" data-path="function-reference.html"><a href="function-reference.html#nca-data-listings"><i class="fa fa-check"></i><b>A.6</b> NCA Data Listings</a></li>
+<li class="chapter" data-level="A.7" data-path="function-reference.html"><a href="function-reference.html#nca-data-tables"><i class="fa fa-check"></i><b>A.7</b> NCA Data Tables</a></li>
+<li class="chapter" data-level="A.8" data-path="function-reference.html"><a href="function-reference.html#nca-parameter-export"><i class="fa fa-check"></i><b>A.8</b> NCA Parameter Export</a></li>
+<li class="chapter" data-level="A.9" data-path="function-reference.html"><a href="function-reference.html#nca-parameter-listings"><i class="fa fa-check"></i><b>A.9</b> NCA Parameter Listings</a></li>
+<li class="chapter" data-level="A.10" data-path="function-reference.html"><a href="function-reference.html#nca-parameter-tables"><i class="fa fa-check"></i><b>A.10</b> NCA Parameter Tables</a></li>
+<li class="chapter" data-level="A.11" data-path="function-reference.html"><a href="function-reference.html#nca-report"><i class="fa fa-check"></i><b>A.11</b> NCA Report</a></li>
+<li class="chapter" data-level="A.12" data-path="function-reference.html"><a href="function-reference.html#nca-slope"><i class="fa fa-check"></i><b>A.12</b> NCA Slope</a></li>
+<li class="chapter" data-level="A.13" data-path="function-reference.html"><a href="function-reference.html#output-compliance"><i class="fa fa-check"></i><b>A.13</b> Output &amp; Compliance</a></li>
+<li class="chapter" data-level="A.14" data-path="function-reference.html"><a href="function-reference.html#tlf-customized"><i class="fa fa-check"></i><b>A.14</b> TLF customized</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="releasenotes.html"><a href="releasenotes.html"><i class="fa fa-check"></i><b>B</b> Release Notes</a>
+<ul>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.3.0-june-22-2022"><i class="fa fa-check"></i>V1.3.0 June 22, 2022</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.2.0-march-29-2022"><i class="fa fa-check"></i>V1.2.0 March 29, 2022</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.1.0-october-20-2021"><i class="fa fa-check"></i>V1.1.0 October 20, 2021</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.0.1-september-22-2021"><i class="fa fa-check"></i>V1.0.1 September 22, 2021</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.0.0-february-12-2021"><i class="fa fa-check"></i>V1.0.0 February 12, 2021</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><b><a href="https://www.intiquan.com" target="_blank">(c) 2021 IntiQuan GmbH</a></b></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><img src='images/IQnca_black.png' height='50px'></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="method-documentation" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Method Documentation</h1>
+<p>The handling of BLQ data for concentration data presentation in TLFs and for the NCA are documented in <a href="method-documentation.html#blqmethods">BLQ data handling</a>. Section <a href="method-documentation.html#ncamodels">NCA models</a> provides an overview on the profiles types handled by <code>IQnca</code> for NCA. Details of the underlying methodology to derive the terminal slope as well as the AUC are discussed in <a href="method-documentation.html#slopecalc">Terminal slope calculation</a> and <a href="method-documentation.html#aucmethods">AUC calculation methods</a>. A complete overview on the implemented PK parameters and on when they are calculated is given in <a href="method-documentation.html#OverviewOfNCAParams">Overview of NCA parameters</a>.</p>
+<div id="grouping-and-profile-differentiation" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Grouping and profile differentiation</h2>
+<p>The analysis data is annotated with a <code>GROUP</code> and a <code>PROFILE</code> name that are used for annotation and stratification. Data of one individual can contain multiple PK concentration profiles.
+For example, for a cross over study studying food effects in which single dose profiles are measured in part A and part B the profile names could be: “Part A - single dose fasted”, “Part B - single dose fed”.
+Each subject furthermore belongs to a group which is used for annotation and further stratification. Typically, the treatment, e.g., “200 mg o.d.”, would be used for the group.</p>
+<p>The group and the profile names are used throughout the analysis. Individual data listings and figures with individual data per panel are annotated with group name and profile. Summary tables and plots are always generated per profile, but may also be stratified by the group.</p>
+</div>
+<div id="ncamodels" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> NCA models</h2>
+<p>Depending on the profile type and the type of administration, different NCA models are applied. The NCA model decides which parameters are derived during the analysis. Currently, IQnca supports the following profile types and administration types for the analysis of blood and plasma samples:</p>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:models">Table 6.1: </span><strong>NCA models</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Type Category
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Option
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Profile Type
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Single Dose
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+First Dose
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Steady State<sup>a</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;background-color: #DED1B9 !important;">
+Administration Type
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;background-color: #DED1B9 !important;">
+IV Bolus<sup>b</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;background-color: #DED1B9 !important;">
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;background-color: #DED1B9 !important;">
+IV Infusion
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;background-color: #DED1B9 !important;">
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;background-color: #DED1B9 !important;">
+Extravascular<sup>a</sup>
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>a</sup> Unique pre-dose sample required.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>b</sup> Pre-dose sample is substituted by extrapolation
+</td>
+</tr>
+</tfoot>
+</table>
+<p>In case multiple profiles are provided for a subject,
+IQnca splits the data internally per unique profile and administration type and applies the corresponding NCA model.</p>
+</div>
+<div id="pre" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Pre-dose data handling</h2>
+<p>Pre-dose samples are identified by negative times or the time being equal to zero. They are kept in the data set as is and reported and presented unchanged in the listings of individual concentration data or plots of individual data.</p>
+<p>Positive pre-dose concentrations above the LLOQ are flagged for first or single dose profiles of exogenous compounds and handled as missing in summary tables and NCA.</p>
+<p>The NCA requires a concentration at dosing time (i.e., C0) for a complete AUC calculation. C0 is defined as the pre-dose observation in the data set for infusion and extravascular administration. In case of bolus administration a pre-dose concentration is required to have time zero such that it is defined as C0. Imputation of C0 is needed if the pre-dose sample is missing or in case of bolus administration has a negative time. Imputation rules are summarized in Table <a href="method-documentation.html#tab:pre-dose">6.2</a> and the description of <a href="#FC0">C0</a>.</p>
+<p>Note that the imputed values of C0 are not considered for determining Tmax/Cmax or Tmin/Cmin and that only one pre-dose sample per profile is allowed.</p>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:pre-dose">Table 6.2: </span><strong>Missing pre-dose imputation for AUC calculation</strong>
+</caption>
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; padding-right: 4px; padding-left: 4px; background-color: #DED1B9 !important;font-size: 14px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Exogenous compound
+</div>
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; padding-right: 4px; padding-left: 4px; background-color: #DED1B9 !important;font-size: 14px;" colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Endogenous compound
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Administration
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Single/First Dose
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Steady State
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Single/First Dose
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Steady State
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Bolus<sup>a</sup>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+back-extrapolated<sup>b</sup>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+back-extrapolated<sup>b</sup>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+back-extrapolated<sup>b</sup>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+back-extrapolated<sup>b</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Infusion or extravascular
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+0
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+minimum observed concentration over dosing interval
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+minimum observed concentration
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+minimum observed concentration over dosing interval
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Only one pre-dose sample allowed per profile. Imputed values are not considered for Tmax/Cmax and Tmin/Cmin calculation.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>a</sup> Imputation of missing as well as pre-dose samples with negative time.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>b</sup> Log-linear regression of first two data points. Or, if one of the values is negative or the second concentration is smallerthan the first, the first non zero concentration is imputed
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="blqmethods" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> BLQ data handling</h2>
+<p>Concentration records that are below the LLOQ, called BLQ data, are flagged in the dataset by checking whether the actually recorded concentration value is below the LLOQ. Data that are actually below the limit of detection are not handled separately, but are pooled with the BLQ data. BLQ data need special handling for the data presentation and summary in listings, tables and figures as well as the NCA.</p>
+<div id="for-listings" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> For Listings</h3>
+<p>In listings of individual data, concentrations below the LLOQ are displayed as “BLQ” or “BLLOQ (&lt;<span class="math inline">\(lloq\)</span>)” with <span class="math inline">\(lloq\)</span> being the numerical value of the LLOQ.</p>
+</div>
+<div id="for-summary-tables-and-nca" class="section level3" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> For Summary Tables and NCA</h3>
+<p>The alternative BLQ handling methods that can be used for summary tables and NCA are described in Table <a href="method-documentation.html#tab:BLQmethTab">6.3</a>. BLQ observations are handled differently for the cases shown in Table <a href="method-documentation.html#tab:BLQcond">6.4</a> that also indicates their default setting in <code>IQnca</code>.</p>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:BLQmethTab">Table 6.3: </span><strong>BLQ handling methods</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Method
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+asis
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Keep value as reported in original data
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+zero
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Impute zero value
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+LLOQ/2
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Impute LLOQ/2 value
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+LLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Impute LLOQ value
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+missing
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Handle as missing (do not use for calculations)
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:BLQcond">Table 6.4: </span><strong>Conditions for which BLQ methods are defined separately</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Condition
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Default BLQ handling method
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLQ observation before the first observations above the LLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+0
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLQ observation in between observations that are above the LLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+missing
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLQ observation the first observation after the last observation above the LLOQ<sup>*</sup>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+LLOQ/2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLQ observation following the first observation after the last observation above the LLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+missing
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> When determining the condition for each observation, ignored records are not considered. These are observations with missing time or concentration values and can include manually selected records.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>*</sup> Requires following BLQ observations. A single BLQ observation at the end of the profile will be handled as observation in between observations above the LLOQ.
+</td>
+</tr>
+</tfoot>
+</table>
+<p>Note that the same settings are used for summary tables and NCA. If zero imputation is used the corresponding concentrations are used for arithmetic mean and standard deviation (SD), but not for the geometric summary statistics.</p>
+</div>
+<div id="for-individual-and-summary-plots" class="section level3" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> For Individual and Summary Plots</h3>
+<p>Per default, the settings applied for NCA and summary tables are adopted when plotting individual or summary PK concentrations.</p>
+<p>Alternatively, the applied BLQ handling method is only conditioned on whether the y-(concentration) axis that is used in a particular plot is linear or log transformed. That is, one of the BLQ handling methods listed in Table <a href="method-documentation.html#tab:BLQmethTab">6.3</a> is applied to all BLQ observations when plotting on linear scale. Another or the same is used for all BLQ observations when plotting on log transformed scale. Summaries, e.g., arithmetic or geometric means, are calculated considering these settings meaning that a summary value displayed in a plot may not be the same as listed in a table if different BLQ settings are used.</p>
+</div>
+</div>
+<div id="slopecalc" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Terminal slope calculation</h2>
+<p>The terminal slope is determined by least-squares of a regression line to log-transformed terminal concentration data points. The PK parameter <span class="math inline">\(\lambda_z\)</span> is defined as the negative of the regression slope which is determined analytically with <span class="math inline">\(t_i\)</span> and <span class="math inline">\(\bar{t}\)</span>, the times and corresponding mean, as well as <span class="math inline">\(cl_i\)</span> and <span class="math inline">\(\bar{cl}\)</span>, the log-transformed concentration and corresponding mean.</p>
+<p><span class="math display">\[ \lambda_z = - \text{slope} = - \frac{\sum_{i=1}^{N} (t_i-\bar{t}) (cl_i-\bar{cl})}{\sum_{i=1}^{N} (t_i-\bar{t})^2} \]</span></p>
+<p>The goodness of the fit is described by the coefficient of determination, R<sup>2</sup>, and its adjusted version.</p>
+<p><span class="math display">\[ R^2 = -\lambda_z \cdot \frac{\sum_{i=1}^{N} (t_i-\bar{t}) (cl_i-\bar{cl})}{\sum_{i=1}^{N} (cl_i-\bar{cl})^2} \]</span></p>
+<p><span class="math display">\[ R^2_{adjusted} = 1 - (1 - R^2) \frac{n - 1}{n - 2} \]</span></p>
+<p>The selection of terminal data points to be used for slope calculation can be done automatically or manually. The “BestSlope” algorithm which is implemented in <code>IQnca</code> and is used per default is described in the following section.</p>
+<div id="best-slope" class="section level3" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Automatic terminal slope selection</h3>
+<p>The algorithm considers all observations from the maximum value to the last nonzero observation. The slope and corresponding adjusted R<sup>2</sup> is determined for the last three, the last four, etc. and all observations under consideration.</p>
+<p>The finally selected data points are defined as the highest number of terminal points that achieve an adjusted R<sup>2</sup> within a defined tolerance compared to the largest adjusted R<sup>2</sup> achieved over all tested sets of data points. The slope is not determined if only two or fewer data points are available or if all concentration values are identical.</p>
+</div>
+</div>
+<div id="aucmethods" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> AUC calculation methods</h2>
+<p>The AUC calculation is based on the trapezoidal method using either the <em>linear trapezoidal rule</em> or the <em>logarithmic trapezoidal rule</em>. That is, for each AUC segment between two consecutive observations, <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span>, the AUC is determined as the product of either the arithmetic or the logarithmic mean of the concentration and the time interval (<span class="math inline">\(t_2 - t_1\)</span>). Equations for the AUC per observation interval based on the linear of logarithmic rule are given in <a href="method-documentation.html#auccalc">AUC interval calculus</a>.
+All segment AUCs are then added to give the total AUC for the considered time range (e.g., over the dosing interval, the observed time range, or a user-defined time interval).
+<!-- If the last time point multiple concentration observations exists, the first one is used and all others discarded. --></p>
+<p>The AUC calculation for the considered time range may require the imputation of concentrations if no observation is available for the start or end time points. For example, no trough measurement was taken and the AUC over a dosing interval for a steady-state dose is calculated, or if the user requires to determine the AUC for a time span with a start or end time not included in the observation times. Imputed concentrations are determined via <em>linear</em> or <em>logarithmic</em> interpolation before the last observed time point or by extrapolation after the observed time point. Note that concentrations before the first observed time point are interpolated between C0 and the first observed time point. Extrapolation is based on the terminal slope (cf. section on <a href="method-documentation.html#slopecalc">slope calculation</a>) of logtransformed values.</p>
+<p>Of note, the extrapolation of the AUC to infinity is a special case of extrapolation of a concentration to a time point after the last observation and is handled analogue. The calculus of the interpolated and extrapolated concentrations as well as for the AUC extrapolated to infinity are described in <a href="method-documentation.html#concinter">Concentration interpolation/extrapolation</a>.</p>
+<p><code>IQnca</code> provides four different options consisting of combinations of linear or logarithmic AUC calculation and linear or logarithmic concentration interpolation, which can be selected by the parameter <em>AUCMETHD</em> in the function <code>IQdataNCA</code>. Table <a href="method-documentation.html#tab:AUCcalcMeth">6.5</a> indicates in which cases the linear or logarithmic version of each method is used.</p>
+<p>Extrapolation of AUC to infinity is based on the last nonzero concentration and the terminal slope on log-scale.</p>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:AUCcalcMeth">Table 6.5: </span><strong>AUC calculation options</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Option
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Trapezoidal rule for AUC of interval<sup>*</sup>
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Interpolation of concentration<sup>†</sup>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Linear Log
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear before Tmax, logarithmic after Tmax
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear before Tmax, logarithmic after Tmax<sup>‡</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+LinearUp LogDown
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear if c<sub>2</sub> &gt; c<sub>1</sub>, logarithmic if c<sub>2</sub> &lt; c<sub>1</sub>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear if c<sub>2</sub> &gt; c<sub>1</sub>, logarithmic if c<sub>2</sub> &lt; c<sub>1</sub>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Linear LinearInterpolation
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Linear LinearLogInterpolation
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+linear before Tmax, logarithmic after Tmax<sup>‡</sup>
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup></sup> Concentrations are extrapolated using the terminal slope on logarithmic scale.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>*</sup> In case that at least for one of the endpoints of an interval the concentration is zero or negative or the concentrations at the endpoints are the same, the linear trapezoidal rule is used.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>†</sup> If a to-be-interpolated point lies in an interval where at least one of the endpoint concentration is zero or negative, linear interpolation is used.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>‡</sup> In case of BOLUS administration where C0 &gt; CMAX, logarithmic interpolation and logarithmic trapezoidal rule determining AUC is also used for points inbetween C0 and CMAX
+</td>
+</tr>
+</tfoot>
+</table>
+<p>Notes on exceptions from the general rule settings for AUC calculation for a segment</p>
+<ul>
+<li>Linear trapezoidal rule is always used if any of the concentrations defining a segment is negative or zero or the concentrations are equal. In these cases, the logarithmic mean is not defined,</li>
+<li>In case of BOLUS administration and if the extrapolated value of C0 is larger than CMAX, the logarithmic trapezoidal rule determining the AUC is used for the whole profile.</li>
+</ul>
+<p>Notes on whether linear or logarithmic interpolation/extrapolation is used</p>
+<ul>
+<li>Extrapolation to later timepoints is always performed on logarithmic scale using the terminal slope that was estimated for the respective profile,</li>
+<li>Extrapolation to earlier timepoints is performed on linear scale,</li>
+<li>Linear interpolation is always used if the to-be-interpolated concentration lies in an interval where at least one endpoint concentration is zero or negative or the endpoint concentrations are equal.</li>
+<li>In case of BOLUS administration where C0 &gt; CMAX and logarithmic interpolation is chosen for observations after Tmax, logarithmic interpolation is also used for points between C0 and CMAX</li>
+<li>Extrapolation cannot be performed and the corresponding AUC cannot be determined if no calculated slope is available.</li>
+</ul>
+<div id="auccalc" class="section level3" number="6.6.1">
+<h3><span class="header-section-number">6.6.1</span> AUC interval calculus</h3>
+<p>The AUC and the area under the first moment curve (AUMC) for an interval between two consecutive observations based on the linear trapezoidal rule is calculated as follows.</p>
+<p><span class="math display">\[ \left. AUC \right|_{t_1}^{t_2} = \frac{c_1 + c_2}{2} \cdot \left( t_2 - t_1 \right) \]</span></p>
+<p><span class="math display">\[ \left. AUMC \right|_{t_1}^{t_2} = \frac{t_1 \cdot c_1 + t_2 \cdot c_2}{2} \cdot \left( t_2 - t_1 \right) \]</span></p>
+<p>Using the logarithmic mean instead of the arithmetic mean, the AUC and AUMC are calculated according to the following equations.</p>
+<p><span class="math display">\[ \left. AUC \right|_{t_1}^{t_2} = \frac{c_2 - c_1}{\ln(\frac{c_2}{c_1})} \cdot \left( t_2 - t_1 \right) \]</span></p>
+<p><span class="math display">\[ \left. AUMC \right|_{t_1}^{t_2} = \frac{t_2 \cdot c_2 - t_1 \cdot c_1}{\ln(\frac{c_2}{c_1})} \cdot \left( t_2 - t_1 \right) - \frac{c_2 -c_1}{\ln(\frac{c_2}{c_1})²}\cdot \left( t_2 - t_1 \right)² \]</span></p>
+</div>
+<div id="concinter" class="section level3" number="6.6.2">
+<h3><span class="header-section-number">6.6.2</span> Concentration interpolation/extrapolation</h3>
+<p>Interpolated concentrations <span class="math inline">\(\hat{c}\)</span> are calculated as follows via linear interpolation of two consecutive observations either using the
+original values (<span class="math inline">\(\hat{c}_{\text{lin}}\)</span>) or logarithms of the concentration values (<span class="math inline">\(\hat{c}_{\text{log}}\)</span>).</p>
+<p><span class="math display">\[ \hat{c}_{\text{lin}} = c_1 + \left| \frac{\hat{t}-t_1}{t_2 - t_1} \right| \left( c_2 - c_1 \right) \]</span></p>
+<p><span class="math display">\[ \hat{c}_{\text{log}} = \exp \left( \ln(c_1) + \left| \frac{\hat{t}-t_1}{t_2 - t_1} \right| \left( \ln(c_2) - \ln(c_1) \right) \right) \]</span></p>
+<p>Extrapolated concentrations <span class="math inline">\(\tilde{c}\)</span> are determined via the terminal slope <span class="math inline">\(\lambda_Z\)</span> from the last observed value <span class="math inline">\(c_{last}\)</span>.
+The last observed value is the last value that is not missing or below the limit of quantification (BLQ).</p>
+<p><span class="math display">\[ \tilde{c} = c_{last} \cdot \exp \left(-\lambda_Z \cdot (\tilde{t} - t_{last}) \right) \]</span></p>
+<p>For the special case of <span class="math inline">\(\tilde{t} \to \infty\)</span>, the extrapolation of the concentration results in an extrapolated AUC after the last
+observation according to</p>
+<p><span class="math display">\[ AUC_{E} = \frac{c_{\text{last}}}{\lambda_Z}  \]</span></p>
+</div>
+</div>
+<div id="OverviewOfNCAParams" class="section level2" number="6.7">
+<h2><span class="header-section-number">6.7</span> Overview of NCA parameters</h2>
+<p>A large number of NCA parameters is provided per individual and as summary tables by IQnca. Depending on the route of administration and type of profile of the considered data, the created output differs and is automatically adjusted by IQnca. The following tables provide an overview over all NCA parameters included in IQnca.</p>
+<p>Parameters are divided into three tables depending on the type of profile data:</p>
+<ul>
+<li>Parameters derived for all types of profiles (Table <a href="method-documentation.html#tab:all-table">6.6</a>)</li>
+<li>Additional parameters derived only for single/first dose profiles (Table <a href="method-documentation.html#tab:singleDose-table">6.7</a>)</li>
+<li>Additional parameters derived only for steady-state dosing (Table <a href="method-documentation.html#tab:steadyState-table">6.8</a>)</li>
+</ul>
+<p>Further the tables are subdivided by the admissible administration profiles <code>BOLUS</code>, <code>INFUSION</code> and <code>EXTRAVASCULAR</code>.</p>
+<p>For the formulas used to calculate the parameters see Table <a href="method-documentation.html#tab:formula-table">6.9</a>.</p>
+<div id="TLST" class="section level3" number="6.7.1">
+<h3><span class="header-section-number">6.7.1</span> Last observation defintion</h3>
+<p>The parameter TLST is defined as the last timepoint at which the concentration is greater than the lower limit of quantification.
+This is the default behavior. An alternative definition is setting TLST as the last timepoint where the concentration is non-zero.
+The latter can be achieved by setting the parameter <em>CTLASTwinnonlinbehavior</em> as “TRUE” in the function <code>nca_IQdataNCA</code>.
+Note that this alternative definition includes possible values which are imputed as “LLOQ” or “LLOQ/2” as non-zero concentration values.</p>
+</div>
+<div id="for-all-profile-types" class="section level3" number="6.7.2">
+<h3><span class="header-section-number">6.7.2</span> For all profile types</h3>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:all-table">Table 6.6: </span><strong>Parameters derived for all types of profiles.</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+PKPARAMCD
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Name
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Description
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Unit<sup>a</sup>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="35">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>ALL ADMINISTRATION TYPES</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZICPT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Intercept of regression
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Intercept of the log-linear regression for finding LAMZ.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CORRXY
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Correlation Between TimeX and Log ConcY
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Correlation between time and logarithmic concentration due to the log-linear regression for LAMZ.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FLAMZ">LAMZ</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Lambda z
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+First order rate constant associated with the terminal portion of the curve. The negative of the slope obtained from a log-linear regression involving datapoints in the terminal part of the curve. For the exact calculation see section <a href="method-documentation.html#slopecalc">6.5</a>.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+1/TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZNPT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Number of Points for Lambda z
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Number of points involved in the regression for LAMZ calculation.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZLL
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Lambda z Lower Limit
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Smallest time point (Lower Limit) of the data involved in the regression for LAMZ calculation.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZUL
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Lambda z Upper Limit
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Largest time point (Upper Limit) of the data involved in the regression for LAMZ calculation.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+R2
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+R Squared
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Coefficient of determination due to the regression for LAMZ calculation.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+R2ADJ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+R Squared Adjusted
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Adjusted coefficient of determination due to the regression for LAMZ calculation.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FLAMZHL">LAMZHL</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Half-Life Lambda z
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Terminal half-life.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FSPAN">SPAN</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Span
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Relative range of HL determination
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TMAX
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time of CMAX
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time of maximal concentration. If profile type is SS then only regarding concentrations in the dosing interval TAU.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CMAX
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Max Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Maximal concentration, occuring at TMAX. If not unique, then the first maximum is used. If profile type SS, then maximal concentration inside the dosing interval TAU.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCMAXD">CMAXD</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Max Conc Norm by Dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dose normalised CMAX.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TMIN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time of CMIN Observation
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time of minimal concentration. If profile type is SS then only regarding concentrations in the dosing interval TAU.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CMIN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Min Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Minimal concentration, occuring at TMIN. If not unique, then the first minimum is used. If profile type SS, then minimal concentration inside the dosing interval TAU.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCMIND">CMIND</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Min Conc Norm by Dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dose normalised CMIN.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TLST
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time of Last Nonzero Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time of last quantifiable observation. If BLLOQ handling rule is set to use LLOQ/2 or LLOQ for the first BLLOQ value post last observable, then Clast and Tlast will be set based on this first BLLOQ imputation. This is counterintuitive - but in order to be aligned with Winnonlin we had to add this exception.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CLST
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Last Nonzero Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Concentration at Tlast. If BLLOQ handling rule is set to use LLOQ/2 or LLOQ for the first BLLOQ value post last observable, then Clast and Tlast will be set based on this first BLLOQ imputation. This is counterintuitive - but in order to be aligned with Winnonlin we had to add this exception.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCLSTP">CLSTP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Last Nonzero Conc Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Predicted concentration value at TLST by regression of terminal phase.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCALL">AUCALL</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC All
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the curve from the time of dosing to the time of the last observation (quantifiable or unquantifiable). Equal to AUCLST if the last observation is quantifiable. Otherwise, AUCALL will not be equal to AUCLST as it includes the additional area from the last quantifiable concentration up to the last observation made.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCIFO">AUCIFO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC Infinity Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the curve from dosing time to infinity, extrapolated from the observed last quantifiable concentration CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCIFOD">AUCIFOD</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC Infinity Obs Norm by Dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dose normalised AUCIFO, using the last given dose if doses of differing quantities are given.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCIFP">AUCIFP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC Infinity Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the curve from dosing time to infinity, extrapolated from the predicted last quantifiable concentration CLSTP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCIFPD">AUCIFPD</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC Infinity Pred Norm by Dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dose normalised AUCIFP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCLST">AUCLST</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC to Last Nonzero Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the curve from the time of dosing to the time of the last quantifiable observation TLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCLSTD">AUCLSTD</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC to Last Nonzero Conc Norm by Dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dose normalised AUCLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCPEO">AUCPEO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC %Extrapolation Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Percentage of AUCIFO due to extrapolation from TLST to infinity.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCPEP">AUCPEP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC %Extrapolation Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Percentage of AUCIFP due to extrapolation from TLST to infinity.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUMCIFO">AUMCIFO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMC Infinity Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the first moment curve from dosing time to infinity, extrapolated from the observed last quantifiable concentration CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUMCIFP">AUMCIFP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMC Infinity Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the first moment curve from dosing time to infinity, extrapolated from the predicted last quantifiable concentration CLSTP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUMCLST">AUMCLST</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMC to Last Nonzero Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the first moment curve from the time of dosing to the time of the last quantifiable observation TLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUMCPEO">AUMCPEO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMC % Extrapolation Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Percentage of AUMCIFO due to extrapolation from TLST to infinity.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUMCPEP">AUMCPEP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMC % Extrapolation Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Percentage of AUMCIFP due to extrapolation from TLST to infinity.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+AUCINTX
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Interval AUC [t1;t2 TIMEUNIT]
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Interval AUC. Using defined AUC calculation and interpolation method. X=1,…,n. 
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+AUCINTXD
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Interval AUC [t1;t2UNIT] Norm by Dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dose normalized Interval AUC. Using defined AUC calculation and interpolation method. X=1,…,n. 
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr grouplength="4">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>EXTRAVASCULAR</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TLAG
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time Until First Nonzero Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time of the observation prior the first quantifiable observation. Equal to zero for BOLUS or INFUSION administration.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FMRTEVIFO">MRTEVIFO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRT Extravasc Infinity Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Mean residence time from dosing time to infinity, extrapolated using CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FMRTEVIFP">MRTEVIFP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRT Extravasc Infinity Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Mean residence time from dosing time to infinity, extrapolated using CLSTP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FMRTEVLST">MRTEVLST</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRT Extravasc to Last Nonzero Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Mean residence time from dosing time to TLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr grouplength="3">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>BOLUS</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+C0<a name="FC0"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Initial Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<ul>
+<li>
+<ul>
+<li>
+<p>Concentration at dosing time. Note that the parameter is only listed in case of BOLUS administration. If there is no concentration at time zero available, then C0 is calculated by the following rules:
+For INFUSION and EXTRAVASCULAR administration: If there is a concentration with negative time point (pre-dose), that time is set to zero and the respective concentration becomes C0. Else if there are only positive time points:
+SINGLE DOSE and FIRST DOSE data: for exogenous compounds set C0 to zero, for endogenous compounds set C0 to the minimum observed.
+STEADY STATE data: set C0 to the minimum observed in the dosing interval TAU.</p>
+For BOLUS: If there is no concentration value at time zero, then C0 is always extrapolated as follows: Find C0 by performing backwards extrapolation by log-linear regression of the first two concentrations C1 and C2. In case of C1 &lt; C2, or C1 or C2 non-positive, set C0 equal to the first positive concentration after time zero instead. C1 and C2 are the first two consecutive concentrations after time zero, after removal of outliers.
+</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCPBEO">AUCPBEO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC %Back Extrapolation Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Percentage of AUCIFO due to back extrapolation of C0 if the first measured concentration is not at dosing time.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCPBEP">AUCPBEP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC %Back Extrapolation Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Percentage of AUCIFP due to back extrapolation of C0 if the first measured concentration is not at dosing time.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr grouplength="3">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>BOLUS/INFUSION</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FMRTIVIFO">MRTIVIFO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRT Intravasc Infinity Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Mean residence time from dosing time to infinity, based on AUCIFO, in case of BOLUS and INFUSION administration.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FMRTIVIFP">MRTIVIFP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRT Intravasc Infinity Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Mean residence time from dosing time to infinity, based on AUCIFP, in case of BOLUS and INFUSION administration.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FMRTIVLST">MRTIVLST</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRT Intravasc to Last Nonzero Conc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Mean residence time from dosing time to TLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>a</sup> TIMEUNIT and DOSEUNIT are taken from the dataset and kept as is.<br>The CONCUNIT from the dataset is rescaled to mass per L.
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="only-for-single-and-first-dose-profiles" class="section level3" number="6.7.3">
+<h3><span class="header-section-number">6.7.3</span> Only for single and first dose profiles</h3>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:singleDose-table">Table 6.7: </span><strong>Additional parameters derived for single/first dose profiles.</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+PKPARAMCD
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Name
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Description
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Unit<sup>a</sup>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="6">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>BOLUS/INFUSION</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCLO">CLO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total CL Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total body clearance based on CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCLP">CLP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total CL Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total body clearance based on CLSTP
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVSSO">VSSO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vol Dist Steady State Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Estimated volume of distribution at steady state, based on last observed concentration CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVSSP">VSSP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vol Dist Steady State Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Estimated volume of distribution at steady state, based on last predicted concentration CLSTP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVZO">VZO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vz Obs
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Volume of distribution associated with the terminal phase, based on CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVZP">VZP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vz Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Volume of distribution associated with the terminal phase, based on CLSTP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr grouplength="4">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>EXTRAVASCULAR</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCLFO">CLFO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total CL Obs by F
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total body clearance, divided by fraction of dose absorbed (bioavailability), based on CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCLFP">CLFP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total CL Pred by F
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total body clearance, divided by fraction of dose absorbed (bioavailability), based on CLSTP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVZFO">VZFO</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vz Obs by F
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Volume of distribution associated with the terminal phase, divided by fraction of dose absorbed (bioavailability), based on CLST.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVZFP">VZFP</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vz Pred by F
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Volume of distribution associated with the terminal phase, divided by fraction of dose absorbed (bioavailability), based on CLSTP.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>a</sup> TIMEUNIT and DOSEUNIT are taken from the dataset and kept as is.<br>The CONCUNIT from the dataset is rescaled to mass per L.
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="only-for-steady-state-profiles" class="section level3" number="6.7.4">
+<h3><span class="header-section-number">6.7.4</span> Only for steady-state profiles</h3>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:steadyState-table">Table 6.8: </span><strong>Additional parameters derived for steady-state profiles.</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+PKPARAMCD
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Name
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Description
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Unit<sup>a</sup>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="4">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>ALL ADMINISTRATION TYPES</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FSWING">SWING</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Swing
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+For profile type SS only. The degree of fluctuation over one dosing interval at steady state (CMIN).
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FSWINGTAU">SWINGTAU</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Swing_Tau
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+For profile type SS only. The degree of fluctuation over one dosing interval at steady state (CTAU).
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUMCTAU">AUMCTAU</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMC Over Dosing Interval
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Area under the first moment curve for the interval from dosing time to dosing time + TAU.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FAUCPTAUE">AUCPTAUE</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC %Extrapolation Over Dosing Interval
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Percentage of AUC due to extrapolation in steady state.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr grouplength="2">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>BOLUS/INFUSION</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCLSS">CLSS</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total CL for Dose Int
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total body clearance at steady state.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVZSS">VZSS</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vz for Dose Int at SS
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Volume of distribution associated with the terminal phase, calculated with AUCTAU.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr grouplength="2">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>EXTRAVASCULAR</strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FCLFSS">CLFSS</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total CL by F for Dose Int
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Total body clearance at steady state divided by the fraction of dose absorbed (bioavailability).
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+<a href="#FVZFSS">VZFSS</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Vz for Dose Int at SS by F
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Volume of distribution associated with the terminal phase, divided by fraction of dose absorbed (bioavailability), calculated with AUCTAU.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>a</sup> TIMEUNIT and DOSEUNIT are taken from the dataset and kept as is.<br>The CONCUNIT from the dataset is rescaled to mass per L.
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="formulas" class="section level3" number="6.7.5">
+<h3><span class="header-section-number">6.7.5</span> Formulas</h3>
+<p>The following table contains the formulas for the parameters.</p>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:formula-table">Table 6.9: </span><strong>Relevant formulas of the parameters.</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+PKPARAMCD
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Formulas
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Units<sup>a</sup>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+LAMZ<a name="FLAMZ"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\lambda_z\)</span>, see section <a href="method-documentation.html#slopecalc">6.5</a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+1/TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+LAMZHL<a name="FLAMZHL"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{ln(2)}{LAMZ}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+SPAN<a name="FSPAN"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{LAMZUL-LAMZLL}{LAMZHL}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CMAXD<a name="FCMAXD"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{CMAX}{DOSE}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CMIND<a name="FCMIND"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{CMIN}{DOSE}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLSTP<a name="FCLSTP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\exp(b0-\lambda_z \cdot TLST)\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CAVG<a name="FCAVG"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{AUCTAU}{TAU}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+FLUCP<a name="FFLUCP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{CMAX-CMIN}{CAVG}\cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+FLUCPTAU<a name="FFLUCPTAU"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{CMAX-CTAU}{CAVG}\cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AILAMZ<a name="FAILAMZ"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{1}{1-\exp(-\lambda_z\cdot TAU)}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+SWING<a name="FSWING"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{CMAX-CMIN}{CMIN}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+SWINGTAU<a name="FSWINGTAU"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{CMAX-CTAU}{CTAU}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCALL<a name="FAUCALL"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUC\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCIFO<a name="FAUCIFO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUCLST + \frac{CLST}{\lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCIFOD<a name="FAUCIFOD"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{AUCIFO}{DOSE}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCIFP<a name="FAUCIFP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUCLST + \frac{CLSTP}{\lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCIFPD<a name="FAUCIFPD"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{AUCIFP}{DOSE}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCLST<a name="FAUCLST"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUC \rvert_{T_0}^{TLST}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCLSTD<a name="FAUCLSTD"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{AUCLST}{DOSE}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCPBEO<a name="FAUCPBEO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{ AUC \rvert_{T_0}^{T_1}}{AUCIFO}\cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCPBEP<a name="FAUCPBEP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{ AUC \rvert_{T_0}^{T_1}}{AUCIFP}\cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCPEO<a name="FAUCPEO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\((1 - \frac{AUCLST}{AUCIFO}) \cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCPEP<a name="FAUCPEP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\((1 - \frac{AUCLST}{AUCIFP}) \cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCTAU<a name="FAUCTAU"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUC \rvert_{T_0}^{TAU}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCTAUD<a name="FAUCTAUD"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{AUCTAU}{DOSE}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT/DOSEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLFO<a name="FCLFO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFO}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLFP<a name="FCLFP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFP}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLFSS<a name="FCLFSS"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCTAU}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLO<a name="FCLO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFO}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLP<a name="FCLP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFP}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLSS<a name="FCLSS"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCTAU}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VSSO<a name="FVSSO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(MRTIVIFO\cdot CLO\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VSSP<a name="FVSSP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(MRTIVIFP\cdot CLP\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VZFO<a name="FVZFO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFO\cdot \lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VZFP<a name="FVZFP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFP\cdot \lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VZFSS<a name="FVZFSS"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCTAU\cdot \lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VZO<a name="FVZO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFO\cdot \lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VZP<a name="FVZP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCIFP\cdot \lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VZSS<a name="FVZSS"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{DOSE}{AUCTAU\cdot \lambda_z}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+VOLROUTINE
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMCIFO<a name="FAUMCIFO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUMCLST + \frac{CLST \cdot TLST}{\lambda_z} + \frac{CLST}{\lambda_z^2}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMCIFP<a name="FAUMCIFP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUMCLST + \frac{CLSTP \cdot TLST}{\lambda_z} + \frac{CLSTP}{\lambda_z^2}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMCLST<a name="FAUMCLST"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUMC \rvert_{T_0}^{TLST}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMCPEO<a name="FAUMCPEO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\((1 - \frac{AUMCLST}{AUMCIFO}) \cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMCPEP<a name="FAUMCPEP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\((1 - \frac{AUMCLST}{AUMCIFP}) \cdot 100\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUMCTAU<a name="FAUMCTAU"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(AUMC \rvert_{T_0}^{TAU}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+CONCUNIT*TIMEUNIT^2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUCPTAUE<a name="FAUCPTAUE"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<ul>
+<li>
+<span class="math inline">\(\frac{AUCTAU-AUCLST}{AUCTAU}\cdot 100\)</span> if TAU &gt; TLST
+<span class="math inline">\(0\)</span> else
+</li>
+</ul>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRTEVIFO<a name="FMRTEVIFO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<ul>
+<li>
+SD,FD: <span class="math inline">\(\frac{AUMCIFO}{AUCIFO}\)</span>
+SS: <span class="math inline">\(\frac{AUMCTAU + \tau\cdot (AUCIFO - AUCTAU)}{AUCTAU}\)</span>
+</li>
+</ul>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRTEVIFP<a name="FMRTEVIFP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<ul>
+<li>
+SD,FD: <span class="math inline">\(\frac{AUMCIFP}{AUCIFP}\)</span>
+SS: <span class="math inline">\(\frac{AUMCTAU + \tau\cdot (AUCIFP - AUCTAU)}{AUCTAU}\)</span>
+</li>
+</ul>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRTEVLST<a name="FMRTEVLST"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<span class="math inline">\(\frac{AUMCLST}{AUCLST}\)</span>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRTIVIFO<a name="FMRTIVIFO"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<ul>
+<li>
+<ul>
+<li>
+SD,FD:
+INFUSION: <span class="math inline">\(\frac{AUMCIFO}{AUCIFO} - \frac{DUR}{2}\)</span>
+BOLUS: <span class="math inline">\(\frac{AUMCIFO}{AUCIFO}\)</span>
+SS:
+INFUSION: <span class="math inline">\(\frac{AUMCTAU + \tau\cdot (AUCIFO - AUCTAU)}{AUCTAU} - \frac{DUR}{2}\)</span>
+BOLUS: <span class="math inline">\(\frac{AUMCTAU + \tau\cdot (AUCIFO - AUCTAU)}{AUCTAU}\)</span>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRTIVIFP<a name="FMRTIVIFP"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<ul>
+<li>
+<ul>
+<li>
+SD,FD:
+INFUSION: <span class="math inline">\(\frac{AUMCIFP}{AUCIFP} - \frac{DUR}{2}\)</span>
+BOLUS: <span class="math inline">\(\frac{AUMCIFP}{AUCIFP}\)</span>
+SS:
+INFUSION: <span class="math inline">\(\frac{AUMCTAU + \tau\cdot (AUCIFP - AUCTAU)}{AUCTAU} - \frac{DUR}{2}\)</span>
+BOLUS: <span class="math inline">\(\frac{AUMCTAU + \tau\cdot (AUCIFP - AUCTAU)}{AUCTAU}\)</span>
+</li>
+</ul>
+</li>
+</ul>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+MRTIVLST<a name="FMRTIVLST"></a>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<ul>
+<li>
+INFUSION: <span class="math inline">\(\frac{AUMCLST}{AUCLST}-\frac{DUR}{2}\)</span>
+BOLUS: <span class="math inline">\(\frac{AUMCLST}{AUCLST}\)</span>
+</li>
+</ul>
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+TIMEUNIT
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<sup>a</sup> TIMEUNIT and DOSEUNIT are taken from the dataset and kept as is.<br>The CONCUNIT from the dataset is rescaled to mass per L.
+</td>
+</tr>
+</tfoot>
+</table>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="dataspec.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="support.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

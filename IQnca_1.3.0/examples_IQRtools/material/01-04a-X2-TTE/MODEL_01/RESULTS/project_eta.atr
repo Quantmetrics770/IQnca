@@ -1,0 +1,15 @@
+# Attributes file for dataset material/01-04a-X2-TTE/MODEL_01/RESULTS/project_eta.csv
+
+atrcontents <- list()
+
+atrcontents$paramNames <- c("Te", "p")
+
+atrcontents$covariateNames <- c("WT", "SEXF")
+
+atrcontents$covNames <- "WT"
+
+atrcontents$catNames <- "SEXF"
+
+atrcontents$ALT_NAMES_USED <- c("XPRED", "XWRES", "IPRED", "IWRES")
+
+

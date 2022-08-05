@@ -1,0 +1,22 @@
+DESCRIPTION:
+Exponential model with delay for time-to-event data.
+Te is the scale parameter (characteristic time).
+Initialization: del = delay before survival start to decrease,
+Te = (time at which survival S=0.4) minus delay
+
+[LONGITUDINAL]
+input = {Te,del}
+
+EQUATION:
+if t<del
+h = 0
+else
+h = 1/Te
+end
+
+DEFINITION:
+Event = {type=event, maxEventNumber=1, hazard=h}
+
+OUTPUT:
+output = {Event}
+

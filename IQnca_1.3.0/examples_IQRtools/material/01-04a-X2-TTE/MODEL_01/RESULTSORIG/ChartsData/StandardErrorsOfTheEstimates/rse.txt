@@ -1,0 +1,4 @@
+parameter,res_sa
+Te_pop,8.4031
+omega_Te,11.3074
+p_pop,8.93672

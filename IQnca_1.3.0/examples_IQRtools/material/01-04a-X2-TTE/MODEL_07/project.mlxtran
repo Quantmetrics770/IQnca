@@ -1,0 +1,111 @@
+; TTE MONOLIX project generated with IQRtools
+
+; ==PROJECT HEADER START===================================================
+; COMMENT             = 'Log-logistic'
+; TOOL                = 'MONOLIX'
+; TOOLVERSION         = 'MLX2019R1'
+; DATA                = '../../01-04a-X2-TTE/data.csv'
+; DOSINGTYPES         = ''
+; COVNAMES            = 'WT'
+; CATNAMES            = 'SEXF'
+; CATCATEGORIES       = '[]'
+; REGRESSIONNAMES     = ''
+; PARAMNAMES          = 'Te,s'
+; PARAMTRANS          = 'exp(phi),exp(phi)'
+; PARAMINVTRANS       = 'log(psi),log(psi)'
+; COVARIATENAMES      = 'WT,SEXF'
+; COVARIATESUSED      = ''
+; BETACOVNAMES        = ''
+; BETACOVTRANS        = ''
+; BETACATNAMES        = ''
+; BETACATREFERENCE    = ''
+; ==PROJECT HEADER END=====================================================
+
+; =============================================
+<DATAFILE>
+; =============================================
+
+[FILEINFO]
+file = '../../01-04a-X2-TTE/data.csv'
+delimiter = comma
+header = {USUBJID, ID, TIME, TIMEUNIT, NAME, DV, YTYPE, INFO, SEXF, WT}
+
+[CONTENT]
+ID = {use=identifier}
+TIME = {use=time}
+DV = {use=observation, name=y1, yname='1', type=event}
+YTYPE = {use=observationtype}
+SEXF = {use=covariate, type=categorical}
+WT = {use=covariate, type=continuous}
+
+; =============================================
+<MODEL>
+; =============================================
+
+[COVARIATE]
+input = {WT,SEXF}
+
+SEXF = {type=categorical, categories={0,1}}
+
+EQUATION:
+tWT = log(WT/65)
+
+DEFINITION:
+tSEXF =
+{
+  transform = SEXF,
+  categories = {
+    0 = 0,
+    1 = 1
+  },
+  reference = 0
+}
+
+[INDIVIDUAL]
+input = {Te_pop, s_pop, omega_Te, omega_s}
+
+DEFINITION:
+Te = {distribution=logNormal, typical=Te_pop, sd=omega_Te}
+s = {distribution=logNormal, typical=s_pop, sd=omega_s}
+
+[LONGITUDINAL]
+file = './project_model.txt'
+
+<FIT>
+data = y1
+model = Event
+
+; =============================================
+<PARAMETER>
+; =============================================
+Te_pop = {value=319, method=MLE}
+s_pop = {value=13, method=MLE}
+omega_Te = {value=0.5, method=MLE}
+omega_s = {value=0.2, method=FIXED}
+
+; =============================================
+<MONOLIX>
+; =============================================
+
+[TASKS]
+populationParameters()
+individualParameters(method = conditionalMode)
+fim(method = StochasticApproximation)
+logLikelihood(method = ImportanceSampling)
+plotResult(method = {outputplot, indfits, obspred, vpc, parameterdistribution, covariatemodeldiagnosis, randomeffects, covariancemodeldiagnosis, likelihoodcontribution, saemresults, fisher })
+
+[SETTINGS]
+GLOBAL:
+seed = 123456
+exportpath = 'RESULTSORIG'
+nbchains = 1
+autochains = no
+
+POPULATION:
+exploratoryautostop = no
+smoothingautostop = no
+smoothingiterations = 20
+exploratoryiterations = 50
+variability = FirstStage
+
+

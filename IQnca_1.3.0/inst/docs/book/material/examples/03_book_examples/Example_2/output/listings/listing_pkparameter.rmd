@@ -1,0 +1,223 @@
+
+!LANDSCAPE
+
+
+#* Listing 2.3 Individual pharmacokinetic parameters
+!BLOCKSTART[keepNext](pkparam1_1)
+**Listing 2.3-1 Individual pharmacokinetic parameters of Plasma Drug B (Drug B)**
+
+* USUBJID: 1
+* Age: 35
+* Gender: Female
+
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile                      | Group    | Dose [mg] | Description                           | Parameter (Unit)    | Value      |
+| ---------------------------- | -------- | --------- | ------------------------------------- | ------------------- | ---------- |
+| Single IV Infusion Dose (SD) | 300mg/m2 | 540       | Number of Points for Lambda z         | LAMZNPT (-)         | 5          |
+|                              |          |           | R Squared Adjusted                    | R2ADJ (-)           | 0.970477   |
+|                              |          |           | Half-Life Lambda z                    | LAMZHL (h)          | 398.976    |
+|                              |          |           | Span                                  | SPAN (-)            | 2.10539    |
+|                              |          |           | Time of CMAX                          | TMAX (h)            | 2          |
+|                              |          |           | Max Conc                              | CMAX (mg/L)         | 75.4       |
+|                              |          |           | Max Conc Norm by Dose                 | CMAXD (mg/L/mg)     | 0.13963    |
+|                              |          |           | Time of CMIN Observation              | TMIN (h)            | 0          |
+|                              |          |           | Min Conc                              | CMIN (mg/L)         | 2.5        |
+|                              |          |           | Min Conc Norm by Dose                 | CMIND (mg/L/mg)     | 0.00462963 |
+|                              |          |           | Time of Last Nonzero Conc             | TLST (h)            | 1008       |
+|                              |          |           | Last Nonzero Conc                     | CLST (mg/L)         | 7.1        |
+|                              |          |           | Last Nonzero Conc Pred                | CLSTP (mg/L)        | 6.59407    |
+|                              |          |           | AUC All                               | AUCALL (mg/L*h)     | 19367.2    |
+|                              |          |           | AUC Infinity Obs                      | AUCIFO (mg/L*h)     | 23453.9    |
+|                              |          |           | AUC Infinity Obs Norm by Dose         | AUCIFOD (mg/L*h/mg) | 43.4332    |
+|                              |          |           | AUC Infinity Pred                     | AUCIFP (mg/L*h)     | 23162.7    |
+|                              |          |           | AUC Infinity Pred Norm by Dose        | AUCIFPD (mg/L*h/mg) | 42.8939    |
+|                              |          |           | AUC to Last Nonzero Conc              | AUCLST (mg/L*h)     | 19367.2    |
+|                              |          |           | AUC to Last Nonzero Conc Norm by Dose | AUCLSTD (mg/L*h/mg) | 35.8651    |
+|                              |          |           | AUC %Extrapolation Obs                | AUCPEO (%)          | 17.4247    |
+|                              |          |           | AUC %Extrapolation Pred               | AUCPEP (%)          | 16.3865    |
+|                              |          |           | Total CL Obs                          | CLO (L/h)           | 0.0230239  |
+|                              |          |           | Total CL Pred                         | CLP (L/h)           | 0.0233133  |
+|                              |          |           | Vol Dist Steady State Obs             | VSSO (L)            | 12.6509    |
+|                              |          |           | Vol Dist Steady State Pred            | VSSP (L)            | 12.5071    |
+|                              |          |           | Vz Obs                                | VZO (L)             | 13.2526    |
+|                              |          |           | Vz Pred                               | VZP (L)             | 13.4192    |
+{NC: Not calculated.<br>Number of significant digits: 6<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_pkparameter.rmd<br>Execution date: 2022-06-22 14:22:32}
+!BLOCKEND(pkparam1_1)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](pkparam1_2)
+**Listing 2.3-2 Individual pharmacokinetic parameters of Plasma Drug B (Drug B)**
+
+* USUBJID: 2
+* Age: 41
+* Gender: Male
+
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile                      | Group    | Dose [mg] | Description                           | Parameter (Unit)    | Value      |
+| ---------------------------- | -------- | --------- | ------------------------------------- | ------------------- | ---------- |
+| Single IV Infusion Dose (SD) | 300mg/m2 | 660       | Number of Points for Lambda z         | LAMZNPT (-)         | 5          |
+|                              |          |           | R Squared Adjusted                    | R2ADJ (-)           | 0.997805   |
+|                              |          |           | Half-Life Lambda z                    | LAMZHL (h)          | 374.402    |
+|                              |          |           | Span                                  | SPAN (-)            | 2.24358    |
+|                              |          |           | Time of CMAX                          | TMAX (h)            | 2          |
+|                              |          |           | Max Conc                              | CMAX (mg/L)         | 157.2      |
+|                              |          |           | Max Conc Norm by Dose                 | CMAXD (mg/L/mg)     | 0.238182   |
+|                              |          |           | Time of CMIN Observation              | TMIN (h)            | 0          |
+|                              |          |           | Min Conc                              | CMIN (mg/L)         | 2.5        |
+|                              |          |           | Min Conc Norm by Dose                 | CMIND (mg/L/mg)     | 0.00378788 |
+|                              |          |           | Time of Last Nonzero Conc             | TLST (h)            | 1008       |
+|                              |          |           | Last Nonzero Conc                     | CLST (mg/L)         | 12.7       |
+|                              |          |           | Last Nonzero Conc Pred                | CLSTP (mg/L)        | 12.8044    |
+|                              |          |           | AUC All                               | AUCALL (mg/L*h)     | 39267.3    |
+|                              |          |           | AUC Infinity Obs                      | AUCIFO (mg/L*h)     | 46127.2    |
+|                              |          |           | AUC Infinity Obs Norm by Dose         | AUCIFOD (mg/L*h/mg) | 69.8897    |
+|                              |          |           | AUC Infinity Pred                     | AUCIFP (mg/L*h)     | 46183.6    |
+|                              |          |           | AUC Infinity Pred Norm by Dose        | AUCIFPD (mg/L*h/mg) | 69.9752    |
+|                              |          |           | AUC to Last Nonzero Conc              | AUCLST (mg/L*h)     | 39267.3    |
+|                              |          |           | AUC to Last Nonzero Conc Norm by Dose | AUCLSTD (mg/L*h/mg) | 59.496     |
+|                              |          |           | AUC %Extrapolation Obs                | AUCPEO (%)          | 14.8717    |
+|                              |          |           | AUC %Extrapolation Pred               | AUCPEP (%)          | 14.9756    |
+|                              |          |           | Total CL Obs                          | CLO (L/h)           | 0.0143083  |
+|                              |          |           | Total CL Pred                         | CLP (L/h)           | 0.0142908  |
+|                              |          |           | Vol Dist Steady State Obs             | VSSO (L)            | 7.47407    |
+|                              |          |           | Vol Dist Steady State Pred            | VSSP (L)            | 7.48283    |
+|                              |          |           | Vz Obs                                | VZO (L)             | 7.72858    |
+|                              |          |           | Vz Pred                               | VZP (L)             | 7.71914    |
+{NC: Not calculated.<br>Number of significant digits: 6<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_pkparameter.rmd<br>Execution date: 2022-06-22 14:22:32}
+!BLOCKEND(pkparam1_2)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](pkparam1_3)
+**Listing 2.3-3 Individual pharmacokinetic parameters of Plasma Drug B (Drug B)**
+
+* USUBJID: 3
+* Age: 59
+* Gender: Male
+
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile                      | Group    | Dose [mg] | Description                           | Parameter (Unit)    | Value      |
+| ---------------------------- | -------- | --------- | ------------------------------------- | ------------------- | ---------- |
+| Single IV Infusion Dose (SD) | 300mg/m2 | 570       | Number of Points for Lambda z         | LAMZNPT (-)         | 3          |
+|                              |          |           | R Squared Adjusted                    | R2ADJ (-)           | 0.984087   |
+|                              |          |           | Half-Life Lambda z                    | LAMZHL (h)          | 316.887    |
+|                              |          |           | Span                                  | SPAN (-)            | 2.12063    |
+|                              |          |           | Time of CMAX                          | TMAX (h)            | 8          |
+|                              |          |           | Max Conc                              | CMAX (mg/L)         | 94.9       |
+|                              |          |           | Max Conc Norm by Dose                 | CMAXD (mg/L/mg)     | 0.166491   |
+|                              |          |           | Time of CMIN Observation              | TMIN (h)            | 0          |
+|                              |          |           | Min Conc                              | CMIN (mg/L)         | 2.5        |
+|                              |          |           | Min Conc Norm by Dose                 | CMIND (mg/L/mg)     | 0.00438596 |
+|                              |          |           | Time of Last Nonzero Conc             | TLST (h)            | 1008       |
+|                              |          |           | Last Nonzero Conc                     | CLST (mg/L)         | 8.6        |
+|                              |          |           | Last Nonzero Conc Pred                | CLSTP (mg/L)        | 8.9331     |
+|                              |          |           | AUC All                               | AUCALL (mg/L*h)     | 31988.2    |
+|                              |          |           | AUC Infinity Obs                      | AUCIFO (mg/L*h)     | 35919.9    |
+|                              |          |           | AUC Infinity Obs Norm by Dose         | AUCIFOD (mg/L*h/mg) | 63.0174    |
+|                              |          |           | AUC Infinity Pred                     | AUCIFP (mg/L*h)     | 36072.2    |
+|                              |          |           | AUC Infinity Pred Norm by Dose        | AUCIFPD (mg/L*h/mg) | 63.2846    |
+|                              |          |           | AUC to Last Nonzero Conc              | AUCLST (mg/L*h)     | 31988.2    |
+|                              |          |           | AUC to Last Nonzero Conc Norm by Dose | AUCLSTD (mg/L*h/mg) | 56.1197    |
+|                              |          |           | AUC %Extrapolation Obs                | AUCPEO (%)          | 10.9457    |
+|                              |          |           | AUC %Extrapolation Pred               | AUCPEP (%)          | 11.3216    |
+|                              |          |           | Total CL Obs                          | CLO (L/h)           | 0.0158686  |
+|                              |          |           | Total CL Pred                         | CLP (L/h)           | 0.0158016  |
+|                              |          |           | Vol Dist Steady State Obs             | VSSO (L)            | 7.33203    |
+|                              |          |           | Vol Dist Steady State Pred            | VSSP (L)            | 7.36793    |
+|                              |          |           | Vz Obs                                | VZO (L)             | 7.25468    |
+|                              |          |           | Vz Pred                               | VZP (L)             | 7.22406    |
+{NC: Not calculated.<br>Number of significant digits: 6<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_pkparameter.rmd<br>Execution date: 2022-06-22 14:22:32}
+!BLOCKEND(pkparam1_3)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](pkparam1_4)
+**Listing 2.3-4 Individual pharmacokinetic parameters of Plasma Drug B (Drug B)**
+
+* USUBJID: 4
+* Age: 55
+* Gender: Female
+
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile                      | Group    | Dose [mg] | Description                           | Parameter (Unit)    | Value     |
+| ---------------------------- | -------- | --------- | ------------------------------------- | ------------------- | --------- |
+| Single IV Infusion Dose (SD) | 400mg/m2 | 866       | Number of Points for Lambda z         | LAMZNPT (-)         | 7         |
+|                              |          |           | R Squared Adjusted                    | R2ADJ (-)           | 0.993182  |
+|                              |          |           | Half-Life Lambda z                    | LAMZHL (h)          | 230.208   |
+|                              |          |           | Span                                  | SPAN (-)            | 2.81484   |
+|                              |          |           | Time of CMAX                          | TMAX (h)            | 2         |
+|                              |          |           | Max Conc                              | CMAX (mg/L)         | 166.4     |
+|                              |          |           | Max Conc Norm by Dose                 | CMAXD (mg/L/mg)     | 0.192148  |
+|                              |          |           | Time of CMIN Observation              | TMIN (h)            | 1008      |
+|                              |          |           | Min Conc                              | CMIN (mg/L)         | 0         |
+|                              |          |           | Min Conc Norm by Dose                 | CMIND (mg/L/mg)     | 0         |
+|                              |          |           | Time of Last Nonzero Conc             | TLST (h)            | 672       |
+|                              |          |           | Last Nonzero Conc                     | CLST (mg/L)         | 13.5      |
+|                              |          |           | Last Nonzero Conc Pred                | CLSTP (mg/L)        | 13.1882   |
+|                              |          |           | AUC All                               | AUCALL (mg/L*h)     | 31197     |
+|                              |          |           | AUC Infinity Obs                      | AUCIFO (mg/L*h)     | 33412.6   |
+|                              |          |           | AUC Infinity Obs Norm by Dose         | AUCIFOD (mg/L*h/mg) | 38.5827   |
+|                              |          |           | AUC Infinity Pred                     | AUCIFP (mg/L*h)     | 33309.1   |
+|                              |          |           | AUC Infinity Pred Norm by Dose        | AUCIFPD (mg/L*h/mg) | 38.4631   |
+|                              |          |           | AUC to Last Nonzero Conc              | AUCLST (mg/L*h)     | 28929     |
+|                              |          |           | AUC to Last Nonzero Conc Norm by Dose | AUCLSTD (mg/L*h/mg) | 33.4053   |
+|                              |          |           | AUC %Extrapolation Obs                | AUCPEO (%)          | 13.419    |
+|                              |          |           | AUC %Extrapolation Pred               | AUCPEP (%)          | 13.1498   |
+|                              |          |           | Total CL Obs                          | CLO (L/h)           | 0.0259184 |
+|                              |          |           | Total CL Pred                         | CLP (L/h)           | 0.0259989 |
+|                              |          |           | Vol Dist Steady State Obs             | VSSO (L)            | 8.5267    |
+|                              |          |           | Vol Dist Steady State Pred            | VSSP (L)            | 8.49873   |
+|                              |          |           | Vz Obs                                | VZO (L)             | 8.60802   |
+|                              |          |           | Vz Pred                               | VZP (L)             | 8.63477   |
+{NC: Not calculated.<br>Number of significant digits: 6<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_pkparameter.rmd<br>Execution date: 2022-06-22 14:22:32}
+!BLOCKEND(pkparam1_4)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](pkparam1_5)
+**Listing 2.3-5 Individual pharmacokinetic parameters of Plasma Drug B (Drug B)**
+
+* USUBJID: 6
+* Age: 45
+* Gender: Male
+
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile                      | Group    | Dose [mg] | Description                           | Parameter (Unit)    | Value      |
+| ---------------------------- | -------- | --------- | ------------------------------------- | ------------------- | ---------- |
+| Single IV Infusion Dose (SD) | 400mg/m2 | 748       | Number of Points for Lambda z         | LAMZNPT (-)         | 8          |
+|                              |          |           | R Squared Adjusted                    | R2ADJ (-)           | 0.945808   |
+|                              |          |           | Half-Life Lambda z                    | LAMZHL (h)          | 241.439    |
+|                              |          |           | Span                                  | SPAN (-)            | 4.14184    |
+|                              |          |           | Time of CMAX                          | TMAX (h)            | 2          |
+|                              |          |           | Max Conc                              | CMAX (mg/L)         | 145.8      |
+|                              |          |           | Max Conc Norm by Dose                 | CMAXD (mg/L/mg)     | 0.19492    |
+|                              |          |           | Time of CMIN Observation              | TMIN (h)            | 0          |
+|                              |          |           | Min Conc                              | CMIN (mg/L)         | 2.5        |
+|                              |          |           | Min Conc Norm by Dose                 | CMIND (mg/L/mg)     | 0.00334225 |
+|                              |          |           | Time of Last Nonzero Conc             | TLST (h)            | 1008       |
+|                              |          |           | Last Nonzero Conc                     | CLST (mg/L)         | 4.5        |
+|                              |          |           | Last Nonzero Conc Pred                | CLSTP (mg/L)        | 6.11658    |
+|                              |          |           | AUC All                               | AUCALL (mg/L*h)     | 38875.7    |
+|                              |          |           | AUC Infinity Obs                      | AUCIFO (mg/L*h)     | 40443.2    |
+|                              |          |           | AUC Infinity Obs Norm by Dose         | AUCIFOD (mg/L*h/mg) | 54.0684    |
+|                              |          |           | AUC Infinity Pred                     | AUCIFP (mg/L*h)     | 41006.3    |
+|                              |          |           | AUC Infinity Pred Norm by Dose        | AUCIFPD (mg/L*h/mg) | 54.8212    |
+|                              |          |           | AUC to Last Nonzero Conc              | AUCLST (mg/L*h)     | 38875.7    |
+|                              |          |           | AUC to Last Nonzero Conc Norm by Dose | AUCLSTD (mg/L*h/mg) | 51.9729    |
+|                              |          |           | AUC %Extrapolation Obs                | AUCPEO (%)          | 3.87569    |
+|                              |          |           | AUC %Extrapolation Pred               | AUCPEP (%)          | 5.19565    |
+|                              |          |           | Total CL Obs                          | CLO (L/h)           | 0.0184951  |
+|                              |          |           | Total CL Pred                         | CLP (L/h)           | 0.0182411  |
+|                              |          |           | Vol Dist Steady State Obs             | VSSO (L)            | 6.5572     |
+|                              |          |           | Vol Dist Steady State Pred            | VSSP (L)            | 6.71784    |
+|                              |          |           | Vz Obs                                | VZO (L)             | 6.44225    |
+|                              |          |           | Vz Pred                               | VZP (L)             | 6.35379    |
+{NC: Not calculated.<br>Number of significant digits: 6<br>IQnca version: 1.2.0<br>Script: compliance<br>Output: output/listings/listing_pkparameter.rmd<br>Execution date: 2022-06-22 14:22:32}
+!BLOCKEND(pkparam1_5)
+
+

@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Data Specification | _main</title>
+  <meta name="description" content="Documentation of the IQnca R Package." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Data Specification | _main" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://iqrnca.intiquan.com/" />
+  <meta property="og:image" content="https://iqrnca.intiquan.com//images/cover.png" />
+  <meta property="og:description" content="Documentation of the IQnca R Package." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Data Specification | _main" />
+  
+  <meta name="twitter:description" content="Documentation of the IQnca R Package." />
+  <meta name="twitter:image" content="https://iqrnca.intiquan.com//images/cover.png" />
+
+<meta name="author" content="IntiQuan GmbH" />
+
+
+<meta name="date" content="2022-06-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="examples.html"/>
+<link rel="next" href="method-documentation.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N1Z3FQJ1YP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N1Z3FQJ1YP');
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://www.intiquan.com" target="_blank"><img src="images/logo.png" width="220px"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>The IQnca R package</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#what"><i class="fa fa-check"></i><b>1.1</b> What?</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#why"><i class="fa fa-check"></i><b>1.2</b> Why?</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#validation"><i class="fa fa-check"></i><b>1.3</b> Validation</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#documentation"><i class="fa fa-check"></i><b>1.4</b> Documentation</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#getting-help"><i class="fa fa-check"></i><b>1.5</b> Getting Help</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction.html"><a href="introduction.html#future-iqnca-developments"><i class="fa fa-check"></i><b>1.6</b> Future IQnca Developments</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2</b> Installation</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="installation.html"><a href="installation.html#easy-installation"><i class="fa fa-check"></i><b>2.1</b> Easy Installation</a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html#license"><i class="fa fa-check"></i><b>2.2</b> License</a></li>
+<li class="chapter" data-level="2.3" data-path="installation.html"><a href="installation.html#source-code"><i class="fa fa-check"></i><b>2.3</b> Source Code</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>3</b> Workflow</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="workflow.html"><a href="workflow.html#import-data"><i class="fa fa-check"></i><b>3.1</b> Import Data</a></li>
+<li class="chapter" data-level="3.2" data-path="workflow.html"><a href="workflow.html#implement-analysis-plan"><i class="fa fa-check"></i><b>3.2</b> Implement Analysis Plan</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="workflow.html"><a href="workflow.html#ignored-observations"><i class="fa fa-check"></i><b>3.2.1</b> Ignored observations</a></li>
+<li class="chapter" data-level="3.2.2" data-path="workflow.html"><a href="workflow.html#customized-auc-intervals"><i class="fa fa-check"></i><b>3.2.2</b> Customized AUC intervals</a></li>
+<li class="chapter" data-level="3.2.3" data-path="workflow.html"><a href="workflow.html#iqrdatanca-export"><i class="fa fa-check"></i><b>3.2.3</b> <code>IQRdataNCA</code> export</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="workflow.html"><a href="workflow.html#plotcleandata"><i class="fa fa-check"></i><b>3.3</b> Explore and Clean Data</a></li>
+<li class="chapter" data-level="3.4" data-path="workflow.html"><a href="workflow.html#present-analysis-data"><i class="fa fa-check"></i><b>3.4</b> Present Analysis Data</a></li>
+<li class="chapter" data-level="3.5" data-path="workflow.html"><a href="workflow.html#execute-the-nca"><i class="fa fa-check"></i><b>3.5</b> Execute the NCA</a></li>
+<li class="chapter" data-level="3.6" data-path="workflow.html"><a href="workflow.html#present-nca-results"><i class="fa fa-check"></i><b>3.6</b> Present NCA Results</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="workflow.html"><a href="workflow.html#non-calculated-and-unreliably-calculated-pk-parameters"><i class="fa fa-check"></i><b>3.6.1</b> Non calculated and unreliably calculated PK parameters</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="workflow.html"><a href="workflow.html#statistical-analysis"><i class="fa fa-check"></i><b>3.7</b> Statistical Analysis</a></li>
+<li class="chapter" data-level="3.8" data-path="workflow.html"><a href="workflow.html#reporting"><i class="fa fa-check"></i><b>3.8</b> Reporting</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="examples.html"><a href="examples.html"><i class="fa fa-check"></i><b>4</b> Examples</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="examples.html"><a href="examples.html#ex1"><i class="fa fa-check"></i><b>4.1</b> Example 1: Bolus single dose data</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="examples.html"><a href="examples.html#data-preparation"><i class="fa fa-check"></i><b>4.1.1</b> Data preparation</a></li>
+<li class="chapter" data-level="4.1.2" data-path="examples.html"><a href="examples.html#apply-analysis-settings"><i class="fa fa-check"></i><b>4.1.2</b> Apply analysis settings</a></li>
+<li class="chapter" data-level="4.1.3" data-path="examples.html"><a href="examples.html#nca-parameter-calculation"><i class="fa fa-check"></i><b>4.1.3</b> NCA parameter calculation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="examples.html"><a href="examples.html#ex2"><i class="fa fa-check"></i><b>4.2</b> Example 2: Infusion single dose data</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="examples.html"><a href="examples.html#data-preparation-1"><i class="fa fa-check"></i><b>4.2.1</b> Data preparation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="examples.html"><a href="examples.html#blq-data-handling"><i class="fa fa-check"></i><b>4.2.2</b> BLQ data handling</a></li>
+<li class="chapter" data-level="4.2.3" data-path="examples.html"><a href="examples.html#data-listings-and-tables"><i class="fa fa-check"></i><b>4.2.3</b> Data listings and tables</a></li>
+<li class="chapter" data-level="4.2.4" data-path="examples.html"><a href="examples.html#data-plots"><i class="fa fa-check"></i><b>4.2.4</b> Data plots</a></li>
+<li class="chapter" data-level="4.2.5" data-path="examples.html"><a href="examples.html#nca-parameter-calculation-1"><i class="fa fa-check"></i><b>4.2.5</b> NCA parameter calculation</a></li>
+<li class="chapter" data-level="4.2.6" data-path="examples.html"><a href="examples.html#result-listings-and-tables"><i class="fa fa-check"></i><b>4.2.6</b> Result listings and tables</a></li>
+<li class="chapter" data-level="4.2.7" data-path="examples.html"><a href="examples.html#reporting-1"><i class="fa fa-check"></i><b>4.2.7</b> Reporting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="examples.html"><a href="examples.html#ex3"><i class="fa fa-check"></i><b>4.3</b> Example 3: Extravascular first dose and steady state</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="examples.html"><a href="examples.html#data-exploration"><i class="fa fa-check"></i><b>4.3.1</b> Data exploration</a></li>
+<li class="chapter" data-level="4.3.2" data-path="examples.html"><a href="examples.html#nca-parameter-calculation-2"><i class="fa fa-check"></i><b>4.3.2</b> NCA parameter calculation</a></li>
+<li class="chapter" data-level="4.3.3" data-path="examples.html"><a href="examples.html#reporting-2"><i class="fa fa-check"></i><b>4.3.3</b> Reporting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="examples.html"><a href="examples.html#ex4"><i class="fa fa-check"></i><b>4.4</b> Example 4: Single oral dose data</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="examples.html"><a href="examples.html#nca-parameter-calculation-3"><i class="fa fa-check"></i><b>4.4.1</b> NCA parameter calculation</a></li>
+<li class="chapter" data-level="4.4.2" data-path="examples.html"><a href="examples.html#comparison-of-results"><i class="fa fa-check"></i><b>4.4.2</b> Comparison of results</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="examples.html"><a href="examples.html#ex5"><i class="fa fa-check"></i><b>4.5</b> Example 5: Special pre-dose handling</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="examples.html"><a href="examples.html#duplicating-the-pre-dose-records"><i class="fa fa-check"></i><b>4.5.1</b> Duplicating the pre-dose records</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="dataspec.html"><a href="dataspec.html"><i class="fa fa-check"></i><b>5</b> Data Specification</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dataspec.html"><a href="dataspec.html#iqdatanca-function"><i class="fa fa-check"></i><b>5.1</b> IQdataNCA Function</a></li>
+<li class="chapter" data-level="5.2" data-path="dataspec.html"><a href="dataspec.html#iqdatanca-object"><i class="fa fa-check"></i><b>5.2</b> IQdataNCA Object</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="method-documentation.html"><a href="method-documentation.html"><i class="fa fa-check"></i><b>6</b> Method Documentation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="method-documentation.html"><a href="method-documentation.html#grouping-and-profile-differentiation"><i class="fa fa-check"></i><b>6.1</b> Grouping and profile differentiation</a></li>
+<li class="chapter" data-level="6.2" data-path="method-documentation.html"><a href="method-documentation.html#ncamodels"><i class="fa fa-check"></i><b>6.2</b> NCA models</a></li>
+<li class="chapter" data-level="6.3" data-path="method-documentation.html"><a href="method-documentation.html#pre"><i class="fa fa-check"></i><b>6.3</b> Pre-dose data handling</a></li>
+<li class="chapter" data-level="6.4" data-path="method-documentation.html"><a href="method-documentation.html#blqmethods"><i class="fa fa-check"></i><b>6.4</b> BLQ data handling</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="method-documentation.html"><a href="method-documentation.html#for-listings"><i class="fa fa-check"></i><b>6.4.1</b> For Listings</a></li>
+<li class="chapter" data-level="6.4.2" data-path="method-documentation.html"><a href="method-documentation.html#for-summary-tables-and-nca"><i class="fa fa-check"></i><b>6.4.2</b> For Summary Tables and NCA</a></li>
+<li class="chapter" data-level="6.4.3" data-path="method-documentation.html"><a href="method-documentation.html#for-individual-and-summary-plots"><i class="fa fa-check"></i><b>6.4.3</b> For Individual and Summary Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="method-documentation.html"><a href="method-documentation.html#slopecalc"><i class="fa fa-check"></i><b>6.5</b> Terminal slope calculation</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="method-documentation.html"><a href="method-documentation.html#best-slope"><i class="fa fa-check"></i><b>6.5.1</b> Automatic terminal slope selection</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="method-documentation.html"><a href="method-documentation.html#aucmethods"><i class="fa fa-check"></i><b>6.6</b> AUC calculation methods</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="method-documentation.html"><a href="method-documentation.html#auccalc"><i class="fa fa-check"></i><b>6.6.1</b> AUC interval calculus</a></li>
+<li class="chapter" data-level="6.6.2" data-path="method-documentation.html"><a href="method-documentation.html#concinter"><i class="fa fa-check"></i><b>6.6.2</b> Concentration interpolation/extrapolation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="method-documentation.html"><a href="method-documentation.html#OverviewOfNCAParams"><i class="fa fa-check"></i><b>6.7</b> Overview of NCA parameters</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="method-documentation.html"><a href="method-documentation.html#TLST"><i class="fa fa-check"></i><b>6.7.1</b> Last observation defintion</a></li>
+<li class="chapter" data-level="6.7.2" data-path="method-documentation.html"><a href="method-documentation.html#for-all-profile-types"><i class="fa fa-check"></i><b>6.7.2</b> For all profile types</a></li>
+<li class="chapter" data-level="6.7.3" data-path="method-documentation.html"><a href="method-documentation.html#only-for-single-and-first-dose-profiles"><i class="fa fa-check"></i><b>6.7.3</b> Only for single and first dose profiles</a></li>
+<li class="chapter" data-level="6.7.4" data-path="method-documentation.html"><a href="method-documentation.html#only-for-steady-state-profiles"><i class="fa fa-check"></i><b>6.7.4</b> Only for steady-state profiles</a></li>
+<li class="chapter" data-level="6.7.5" data-path="method-documentation.html"><a href="method-documentation.html#formulas"><i class="fa fa-check"></i><b>6.7.5</b> Formulas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="support.html"><a href="support.html"><i class="fa fa-check"></i><b>7</b> Support</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="function-reference.html"><a href="function-reference.html"><i class="fa fa-check"></i><b>A</b> Function Reference</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="function-reference.html"><a href="function-reference.html#general-data-io"><i class="fa fa-check"></i><b>A.1</b> General Data I/O</a></li>
+<li class="chapter" data-level="A.2" data-path="function-reference.html"><a href="function-reference.html#help-documentation"><i class="fa fa-check"></i><b>A.2</b> Help &amp; Documentation</a></li>
+<li class="chapter" data-level="A.3" data-path="function-reference.html"><a href="function-reference.html#installation-1"><i class="fa fa-check"></i><b>A.3</b> Installation</a></li>
+<li class="chapter" data-level="A.4" data-path="function-reference.html"><a href="function-reference.html#nca-data"><i class="fa fa-check"></i><b>A.4</b> NCA Data</a></li>
+<li class="chapter" data-level="A.5" data-path="function-reference.html"><a href="function-reference.html#nca-data-figures"><i class="fa fa-check"></i><b>A.5</b> NCA Data Figures</a></li>
+<li class="chapter" data-level="A.6" data-path="function-reference.html"><a href="function-reference.html#nca-data-listings"><i class="fa fa-check"></i><b>A.6</b> NCA Data Listings</a></li>
+<li class="chapter" data-level="A.7" data-path="function-reference.html"><a href="function-reference.html#nca-data-tables"><i class="fa fa-check"></i><b>A.7</b> NCA Data Tables</a></li>
+<li class="chapter" data-level="A.8" data-path="function-reference.html"><a href="function-reference.html#nca-parameter-export"><i class="fa fa-check"></i><b>A.8</b> NCA Parameter Export</a></li>
+<li class="chapter" data-level="A.9" data-path="function-reference.html"><a href="function-reference.html#nca-parameter-listings"><i class="fa fa-check"></i><b>A.9</b> NCA Parameter Listings</a></li>
+<li class="chapter" data-level="A.10" data-path="function-reference.html"><a href="function-reference.html#nca-parameter-tables"><i class="fa fa-check"></i><b>A.10</b> NCA Parameter Tables</a></li>
+<li class="chapter" data-level="A.11" data-path="function-reference.html"><a href="function-reference.html#nca-report"><i class="fa fa-check"></i><b>A.11</b> NCA Report</a></li>
+<li class="chapter" data-level="A.12" data-path="function-reference.html"><a href="function-reference.html#nca-slope"><i class="fa fa-check"></i><b>A.12</b> NCA Slope</a></li>
+<li class="chapter" data-level="A.13" data-path="function-reference.html"><a href="function-reference.html#output-compliance"><i class="fa fa-check"></i><b>A.13</b> Output &amp; Compliance</a></li>
+<li class="chapter" data-level="A.14" data-path="function-reference.html"><a href="function-reference.html#tlf-customized"><i class="fa fa-check"></i><b>A.14</b> TLF customized</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="releasenotes.html"><a href="releasenotes.html"><i class="fa fa-check"></i><b>B</b> Release Notes</a>
+<ul>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.3.0-june-22-2022"><i class="fa fa-check"></i>V1.3.0 June 22, 2022</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.2.0-march-29-2022"><i class="fa fa-check"></i>V1.2.0 March 29, 2022</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.1.0-october-20-2021"><i class="fa fa-check"></i>V1.1.0 October 20, 2021</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.0.1-september-22-2021"><i class="fa fa-check"></i>V1.0.1 September 22, 2021</a></li>
+<li class="chapter" data-level="" data-path="releasenotes.html"><a href="releasenotes.html#v1.0.0-february-12-2021"><i class="fa fa-check"></i>V1.0.0 February 12, 2021</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><b><a href="https://www.intiquan.com" target="_blank">(c) 2021 IntiQuan GmbH</a></b></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><img src='images/IQnca_black.png' height='50px'></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dataspec" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Data Specification</h1>
+<div id="iqdatanca-function" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> IQdataNCA Function</h2>
+<p>The function <code>IQdataNCA</code> takes the source data set and extends it by adding columns containing information about the handling of the data and the methods used in the NCA. In this way, all options and choices by the user about the analysis are stored in one place. This augmented data set, namely the <code>IQdataNCA</code> object, is then ready for the NCA parameter calculation.</p>
+</div>
+<div id="iqdatanca-object" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> IQdataNCA Object</h2>
+<p>The <code>IQdataNCA</code> object is the source data set augmented by a fixed number of columns which are added through the function. These added columns may be empty or contain default values if they cannot be derived from the data or user input. Note that some column names from the source data set need to be mapped beforehand according to the <code>IQdataNCA</code> specification.</p>
+<p>The types of columns in the <code>IQdataNCA</code> object are:</p>
+<ul>
+<li><a href="#Required">Required</a>: columns from the source data set which are minimally required by <code>IQdataNCA</code>,</li>
+<li><a href="#Conditionally%20required">Conditionally required</a>: columns from the source data set, conditionally required depending on profile and administration type,</li>
+<li><a href="#Optional">Optional</a>: columns from the source data set used for annotation of the data set,</li>
+<li><a href="#Covariate">Covariate</a>: columns from the source data set,</li>
+<li><a href="#Index/Flag/Comment">Index/Flag/Comment</a>: defined by user input, these columns flag records which are to be ignored, with corresponding comments,</li>
+<li><a href="#Time">Time</a>: columns containing time data, derived from the original time data of the source data set,</li>
+<li><a href="#Blloq">Blloq</a>: columns containing information about the handling values below the LLOQ, defined by user input,</li>
+<li><a href="#Concentration">Concentration</a>: columns containing concentration data, derived from the original concentration data of the source data set,</li>
+<li><a href="#Slope">Slope</a>: parameters calculated by the best/manual-slope algorithm</li>
+<li><a href="#NCA">NCA</a>: columns indicating the AUC calculation method to be used, and intervals for corresponding interval AUC calculation.</li>
+</ul>
+<table class="table" style="font-size: 12px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-2">Table 5.1: </span><strong>Columns of IQdataNCA object</strong>
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Column
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Label
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Description
+</th>
+<th style="text-align:left;font-weight: bold;color: #EFFBFF !important;background-color: #776138 !important;font-size: 14px;">
+Comment
+</th>
+</tr>
+</thead>
+<tbody>
+<tr grouplength="20">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Required<a name="Required"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+USUBJID
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Unique subject identifier
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Unique subject identifier
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Always to be provided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+STUDYID
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Study ID
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Study ID
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Always to be provided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+COMPOUND
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Name of compound
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Name of the compound
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Always to be provided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+ANALYTE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Name of analyte
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Name of the analyte
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Might be available in PCTEST
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+MATRIX
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Matrix definition
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Biological matrix
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+PCSPEC
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+PROFILE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Annotation of distinct profiles
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Unique name for the same type of profiles to be analyzed together.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User defined - could be based on one or multiple columns in the source data.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+PROFTYPE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Type of profile
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+“SD” for single dose, “FD” for first dose, “SS” for steady-state.
+“FD” is generally treated the same as “SD”. The main difference is that the follow-up will be limited by the dosing interval.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Always to be provided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+GROUP
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Treatment group information
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Treatment group information, used for stratification and annotation in figures, tables, listings.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Might be available as ACTARMCD or ACTARM in adpc. Could also be constructed based on DOSE+DOSEUNIT and potentially other identifiers.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+GROUPN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Treatment group dose information
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Numeric representation for GROUP. In fixed dose dosing the GROUPN value should be identical to DOSE column. In relative dose dosing (e.g. X mg/kg or X ng/m2) GROUPN = X. The information is used for stratification and annotation in figures, tables, listings.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Always to be provided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+GROUPU
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Unit of GROUPN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Unit of GROUPN. The unit of the numeric group representation. E.g. “mg”, “mg/kg”, “mg/m2”, etc.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Always to be provided
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+DAY
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Actual Study Day of PK sampling
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Day of PK sampling
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+PCDAY
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+ATIME
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Actual relative time to previous dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Actual relative time of concentration observation in TIMEUNIT units.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Difference between PCDTC and PCRFTDTC in TIMEUNIT units. If some information is missing then set to NA (single records or all records). Imputation in certain cases can be done but for now should be done manually, entering info what was done into the COMMENTR column
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+NTIME
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Nominal relative time to previous dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Nominal / protocol relative time of concentration observations in TIMEUNIT units.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+PCTPTNUM
+If not available set to NA (single records or all records)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TIMEUNIT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time unit
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Used time unit. Definition of the general time unit for analysis. Key time and duration columns need to be in this unit. “Minutes”, “Hours”, “Days”, “Weeks”
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+“Minutes”, “Hours”, “Days”, “Weeks” are currently valid entries
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+ACONC
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Actual observed concentrations
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Actual observed concentrations in CONCUNIT units. NA: missing. 0: BLLOQ. “Value”: actual value. If other alphanumeric character then interpret as no value available and set to NA To be used for listings. 0 then to be reported only as BLQ.  
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<p>Based on
+ACONC=PCSTRESN<br />
+ACONC[PCORRES==“BLQ“] = 0</p>
+If units allow then can also be determined by:
+ACONC = PCORRES
+ACONC[PCORRES==“BLQ”] = 0
+as.numeric(ACONC)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CONCUNIT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Unit of observed concentrations
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Unit of observed concentrations
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+PCSTRESU or PCORRESU
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Lower limit of quantification
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Lower limit of quantification in CONCUNIT units
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+PCLLOQ
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+ADM
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Administration type
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Administration type to be considered in NCA PK parameter determination. “BOLUS”, “INFUSION”, or “EXTRAVASCULAR“
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Could be based on EXROUTE but user adaptation needed to required values: “BOLUS”, “INFUSION”, or “EXTRAVASCULAR“ (non-case sensitive)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+DOSE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Actual dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Actual dose given with previous dose (absolute amount or relative amount, e.g., per kg body weight or per m2 body surface area) in DOSEUNIT unit.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+EXDOSE (absolute or relative dose)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+DOSEUNIT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dose unit
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Unit of DOSE (accepted units of absolute doses are: g, mg, ug, ng, pg). Typical relative dose units are mg/kg or mg/m2. However, expressions other than kg or m2 are also accepted as long as the first part is an accepted absolute dose unit.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+EXDOSU. Allowed values: “g”,“mg”,“ug”,“ng”,“pg”, and combinations thereof with body size descriptor for relative doses
+</td>
+</tr>
+<tr grouplength="3">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Conditionally required<a name="Conditionally%20required"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TAU
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Dosing interval for steady-state analysis
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Nominal dosing interval in TIMEUNIT time units for steady-state and first-dose analysis (SS, FD PROFTYPE)
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Required for profiles that are defined by PROFTYPE==”SS” or “FD”. Otherwise NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+ADUR
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Actual duration of administration
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Actual duration of administration in TIMEUNIT unit for ADM=“INFUSION”
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Required for IV infusion (ADM = “INFUSION”). Otherwise NA.
+Defined as difference of EXENDTC and PCRFTDTC. If EXENDTC is missing but PCRFTDTC is defined then ADUR=0. If PCRFTDTC is missing the ADUR=NA.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+NDUR
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Nominal duration of administration
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Nominal (per protocol) duration of administration (&gt;0: infusion, =0: bolus) in TIMEUNIT unit.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Required for IV infusion (ADM = “INFUSION”). Otherwise NA.
+</td>
+</tr>
+<tr grouplength="5">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Optional<a name="Optional"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+VISIT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Visit Name
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Visit Name 
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+If not available value set to NA. Main use is for annotation of the data set
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+VISITNUM
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Visit Number
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Visit Number
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+If not available value set to NA. Main use is for annotation of the data set
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+PCTPT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Nominal/protocol Time Point Name
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Nominal/protocol Time Point Name
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+If not available value set to NA. Main use is for annotation of the data set
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+PCDTC
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Date/Time of PK sampling
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Date and time of PK sampling.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+If not available value set to NA. Main use is for annotation of the data set
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+EXSTDTC
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Start Date/Time of Treatment
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Date and time of treatment start (related to the profile measured).
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+If not available value set to NA. Main use is for annotation of the data set
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Covariate<a name="Covariate"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+PERIOD
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Period of study
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Period of study in sequential or cross-over trials
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+These are all considered covariates. They can be used for stratification of results. But also are displayed in a systematic manner in listings.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+SEQUENCE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Sequence
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Sequence of treatment in cross-over studies
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+These are all considered covariates. They can be used for stratification of results. But also are displayed in a systematic manner in listings.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+COUNTRY
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Country identifier
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Country identifier for reporting purposes
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+These are all considered covariates. They can be used for stratification of results. But also are displayed in a systematic manner in listings.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+SITEID
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Site identifier
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Site identifier for reporting purposes
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+These are all considered covariates. They can be used for stratification of results. But also are displayed in a systematic manner in listings.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+AGE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Age in years
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Age of subject in years
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+These are all considered covariates. They can be used for stratification of results. But also are displayed in a systematic manner in listings.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+SEX
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Sex
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Gender of subject
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+These are all considered covariates. They can be used for stratification of results. But also are displayed in a systematic manner in listings.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+RACE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Race
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Race of subject
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+These are all considered covariates. They can be used for stratification of results. But also are displayed in a systematic manner in listings.
+</td>
+</tr>
+<tr grouplength="8">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Index/Flag/Comment<a name="Index/Flag/Comment"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+IX
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Index of profile observations
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+1:N – numbering of profile records. The use of the index is mainly the selection of records for slope calculation
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<p>1:N based on time information, starting with 1 for each profile (PROFILE) within a subject (USUBJID) </p>
+This column is always derived even if present already. It is defined based on TIME! So it has to be generated after the derivation (and potential imputation) of the TIME column
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+COMPTYPE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Type of compound
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Type of compound (“exogenous” or “endogenous”)
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User defined
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+IGNOREI
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Reason for ignoring the subject
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+If not NA then the entry is assumed to define the reason why this subject is ignored in the analysis. This subject still appears in INDIVIDUAL listings and figures - but not in summary results. The entries in IGNOREI within a USUBJID and PROFILE combination have to be unique.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User defined
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+IGNORER
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Reason for ignoring the record
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+If not NA then the entry is assumed to define the reason why this record is ignored in the totality of the analysis. Records ingored via IGNORER do not appear in listings and individual figures.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User defined
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+IGNORSUM
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Reason for ignoring record in summary and inferential procedures
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+If not NA then the entry is assumed to define the reason why this record is ignored in the summary and inferential procedures.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<p>User defined</p>
+Automatic definition:
+If TIME and/or ACONC is NA
+ACONC&gt;=LLOQ for TIME&lt;=0 and PROFTYPE=“SD” or “FD”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+IGNORNCA
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Reason for ignoring record in NCA PK parameter determination
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+If not NA then the entry is assumed to define the reason why this record is ignored in the calculation of the NCA PK parameters.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<p>User defined</p>
+Automatic definition:
+If TIME and/or ACONC is NA
+ACONC&gt;=LLOQ for TIME&lt;=0 and PROFTYPE=“SD” or “FD”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+COMMENTR
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Record specific comments
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Record specific comments. Adding comments and imputation information as needed. Multiple comments can be present and then should be separated by “:::” for ease of later parsing and extraction. COMMENTR needs to include the reason for exclusion (if FLAGLTF/SUM/NCA is set to 0 for this record). Comments will be displayed in record listings.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Default: “” (empty string)
+A recors is IGNORED from the whole analysis if the COMMENTR column contains “IGNORED RECORD”. In addition a reason should be provided as comment as well.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+COMMENTI
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Individual subject specific comments
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Individual subject specific comments. Multiple comments can be present and then should be separated by “:::” for ease of later parsing and extraction. They can also be present in different rows for this subject. The aggregated information out of all rows in this subject and exploded by ::: would be applicable. If a subject is excluded from the analysis, COMMENTI needs to include the reason for exclusion. Comments will be displayed in record listings for the specific subject.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Default: “” (empty string)
+A subjects is ignored from the whole analysis if the COMMENTI column containes “IGNORED SUBJECT”. In addition a reason should be provided as comment as well.
+</td>
+</tr>
+<tr grouplength="7">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Time<a name="Time"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+ATAFD
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Actual time since first dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Absolute / actual time since first dose in TIMEUNIT units
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Either user provided or set based on ATIME
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+NTAFD
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Nominal time since first dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Absolute nominal / protocol time since first dose in TIMEUNIT units
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Either user provided or set based on NTIME
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FLAGTIME
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Definition if actual or nominal time
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+“actual”: actual time used in NCA PK parameter determination
+“nominal”: nominal time used in NCA PK parameter determination
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Default: “actual” It will be checked if ATIME is defined. If not “nominal” will be used.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FATIMIMP
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Time imputation flag
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Used in case if basis for analysis is actual time but some actual time point is missing. In this case the user can decide to impute this time point if the nominal time is available.“asis” or “nominal”. “asis”: if missing then it will not be imputed and not be considered in the analysis. If “nominal” then it will be imputed based on NTIME, NTAFD, NDUR and impact TIME, TAFD, and DUR
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<p>Default: “asis”</p>
+If imputation is done then COMMENTR for these records needs to be set
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TAFD
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Analysis time since first dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Analysis time derived/selected from ATAFD and NTAFD in TIMEUNIT units.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<p>Derived based on ATAFD and NTAFD, depending on flag FLAGTIME</p>
+Imputation of actual time with nominal time possible if NTAFD defined
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+TIME
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Analysis relative time to previous dose
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Analysis time derived/selected from ATIME and NTIME in TIMEUNIT units. Used for NCA PK parameter determination.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+<p>Derived based on ATIME and NTIME, depending on flag FLAGTIME</p>
+Imputation of actual time with nominal time possible if NTIME defined
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+DUR
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Analysis administration duration
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Administration duration used in analysis, derived based on ADUR and NDUR in TIMEUNIT unit. Used for NCA PK parameter determination when ADM=“INFUSION”
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ADUR and NDUR depending on flag FLAGTIME
+</td>
+</tr>
+<tr grouplength="11">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Blloq<a name="Blloq"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+BLLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ flag
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+BLLOQ flag, 1=value is &lt;LLOQ, 0 value indicates &gt;=LLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+as.numeric(ACONC lessthan LLOQ)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+BLLOQPR
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Pre first &gt;=LLOQ value
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Flag indicating BLLOQ values before first non-BLLOQ value
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ACONC and LLOQ. NA BLLOQ (due to ACONC NA or BLLOQ “missing” records not considered). Ignored records (general and NCA) will not be considered.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+BLLOQIN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ inbetween &gt;=LLOQ values
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Flag indicating BLLOQ values inbetween non-BLLOQ values or a single trailing BLLOQ value.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ACONC and LLOQ. NA BLLOQ (due to ACONC NA or BLLOQ “missing” records not considered). Ignored records (general and NCA) will not be considered.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+BLLOQP1
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+First BLLOQ post last &gt;=LLOQ value
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Flag indicating the first BLLOQ value after the last non-BLLOQ value if at least two BLLOQ values come in sequence.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ACONC and LLOQ. NA BLLOQ (due to ACONC NA or BLLOQ “missing” records not considered). Ignored records (general and NCA) will not be considered.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+BLLOQPO
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+2nd to last BLLOQ post last &gt;= LLOQ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Flag indicating the 2nd-last BLLOQ value after the last non-BLLOQ value
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ACONC and LLOQ. NA BLLOQ (due to ACONC NA or BLLOQ “missing” records not considered). Ignored records (general and NCA) will not be considered.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FLGBLQPR
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ handling pre first &gt;=LLOQ record
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Handling BLLOQ values before first observation above LLOQ. Options: “asis”, “0”, ” LLOQ/2”, “LLOQ”, “missing”.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User definition. Default: “0”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FLGBLQIN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ handling inbetween &gt;=LLOQ records 
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Handling BLLOQ values between observations above LLOQ or a single BLLOQ value as last sample. Options: “asis”, “0”, ” LLOQ/2”, ” LLOQ “,”missing”.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User definition. Default: “missing”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FLGBLQP1
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ handling for first BLLOQ record post last &gt;= LLOQ record
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Handling first BLLOQ value after last observation above LLOQ if at least 2 BLLOQ values come in sequence. Options: “asis”, “0”, ” LLOQ/2”, ” LLOQ “,”missing”.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User definition. Default: “LLOQ/2”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FLGBLQPO
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ handling for BLLOQ records following first BLQ record post last &gt;= LLOQ record
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Handling BLLOQ values after first BLLOQ post last observation above LLOQ. Options: “asis”, “0”, ” LLOQ/2”, ” LLOQ “,”missing”.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User definition. Default: “missing”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FGBQPLIN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ handling in plots lin Y axis
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Handling BLLOQ values in plots on linear Y axis. Options: “asis”, “0”, ” LLOQ/2”, ” LLOQ “,”missing”. In addition it can be defined “asCONC”, which will use the same rules as defined for the NCA analysis with flags FLGBLQPR, FLGBLQIN, FLGBLQP1, FLGBLQPO
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User definition. Default: “asCONC”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FGBQPLOG
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+BLLOQ handling in plots – log Y axis
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Handling BLLOQ values in plots on log Y axis. Options: “asis”, “0”, ” LLOQ/2”, ” LLOQ “,”missing”. In addition it can be defined “asCONC”, which will use the same rules as defined for the NCA analysis with flags FLGBLQPR, FLGBLQIN, FLGBLQP1, FLGBLQPO
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+User definition. Default: “asCONC”
+</td>
+</tr>
+<tr grouplength="3">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Concentration<a name="Concentration"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CONC
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Analysis concentrations
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Analysis concentrations for summary tables and the NCA PK parameter determination.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ACONC and BLLOQ handling methods (BLLOQPR, BLLOQIN, BLLOQPO, FLGBLQPR, FLGBLQIN, FLGBLQPO) and potentially other considerations
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CONCPLIN
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Concentration used in Lin Y plots
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Concentration used in plots with linear Y axis. This could be different from CONC, if desired.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ACONC and BLLOQ and FGBQPLIN.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CONCPLOG
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Concentration used in Log Y plots
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Concentration used in plots with log Y axis. This could be different from CONC, if desired.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Derived based on ACONC and BLLOQ and FGBQPLOG.
+</td>
+</tr>
+<tr grouplength="12">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>Slope<a name="Slope"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+FLGSLOPE
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Flag defining how slope determined
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Definition of how the terminal slope will be defined. 2 settings possible “bestslope” or “manual”
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Set based on user settings. Default: “bestslope”. If slope points for a subject defined then “manual” is set
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+SLOPETOL
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Tolerance for best slope calculation
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Tolerance setting for best slope calculation.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Default: 0.0001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+SLOPEPT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Definition if used for slope calc
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+0: this point IS NOT included in the slope calculation
+1: this point IS used in the slope calculation.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Info set using the functions
+slope_IQRdataNCA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+R2
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+R Squared
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+R2ADJ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+R Squared Adjusted
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZNPT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Number of Points for Lambda z
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZ
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Lambda z
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZICPT
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Intercept of regression
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CORRXY
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Correlation Between TimeX and Log ConcY
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZLL
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Lambda z Lower Limit
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+LAMZUL
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Lambda z Upper Limit
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+CLSTP
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Last Nonzero Conc Pred
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Calculated by best or manual slope calculation. Definition repeated in IQRparamNCA_Specification_edit.xlsx
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+</td>
+</tr>
+<tr grouplength="2">
+<td colspan="4" style="background-color: #DED1B9; color: #292113;">
+<strong>NCA<a name="NCA"></a></strong>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+AUCMETHD
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC calculation method
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Definition of the AUC calculation method. “Linear Log”, “LinearUp LogDown”, “Linear LinearInterpolation”, “Linear LinearLogInterpolation”.
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Same methods as available in Winnonlin (<a href="https://onlinehelp.certara.com/phoenix/8.2/topics/nca.htm#XREF_52753_Options_tab" class="uri">https://onlinehelp.certara.com/phoenix/8.2/topics/nca.htm#XREF_52753_Options_tab</a>)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: #C9EEFF !important;padding-left: 2em;" indentlevel="1">
+AUCINVAL
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+AUC interval definition
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;max-width: 7cm; ">
+Definition of the AUC intervals to consider in the calculation.
+Example: “[0;24];[0;48]”
+</td>
+<td style="text-align:left;background-color: #C9EEFF !important;">
+Same methods as available in Winnonlin (<a href="https://onlinehelp.certara.com/phoenix/8.2/topics/nca.htm#XREF_52753_Options_tab" class="uri">https://onlinehelp.certara.com/phoenix/8.2/topics/nca.htm#XREF_52753_Options_tab</a>)
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="examples.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="method-documentation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

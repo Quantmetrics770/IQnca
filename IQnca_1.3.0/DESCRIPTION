@@ -1,0 +1,36 @@
+Package: IQnca
+Type: Package
+Version: 1.3.0
+Title: Noncompartmental Analysis in R
+Authors@R: c(
+    person("Anne", "Kuemmel", role = c("aut")),
+	person("Benjamin", "Guiastrennec", role = c("aut")),
+	person("Daniel", "Kaschek", role = c("aut")),
+	person("David", "Innauen", role = c("aut")),
+    person("Henning", "Schmidt", role = c("cre", "aut"), email = "henning.schmidt@intiquan.com"),
+	person("IntiQuan GmbH", role = "cph", email = "info@intiquan.com")
+    )
+Maintainer: IntiQuan GmbH <info@intiquan.com>
+Description: Powerful Noncompartmental Analysis Tool based on R. Using graphics only where needed. 
+    Industry standard calulation of parameters. Enabling reporting of results directly in Word. 
+    Straightforward import from CDSIC and export to adpp.xpt and adpc.xpt, including generation of define files.
+License: AGPL-3
+URL: https://github.com/IntiQuan/IQnca
+BugReports: https://github.com/IntiQuan/IQnca/issues
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+Suggests: testthat, covr, devtools, roxygen2, knitr, rmarkdown
+Imports: ggplot2 (>= 2.1.0), tidyr (>= 1.0.2), dplyr (>= 0.4.3),
+        data.table, cowplot, crayon, gtable, methods, plyr, purrr,
+        readxl, tibble, haven, pdftools, stringr, httr, ggpubr
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+NeedsCompilation: no
+Packaged: 2022-06-22 12:26:02 UTC; henning
+Author: Anne Kuemmel [aut],
+  Benjamin Guiastrennec [aut],
+  Daniel Kaschek [aut],
+  David Innauen [aut],
+  Henning Schmidt [cre, aut],
+  IntiQuan GmbH [cph]

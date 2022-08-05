@@ -1,0 +1,137 @@
+
+!LANDSCAPE
+
+
+#* Table 2.2 Summary statistics for PK parameters by dose group stratified by SEX
+!BLOCKSTART[keepNext](tableparampk1_1x1)
+**Table 2.2-1-1 Summary statistics for PK parameters by dose group of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (stratified by SEX)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile                      | Group    | Name (Unit)                                       | SEX    | N^a^ | Mean (SD)            | CV% mean | Geo-mean | CV% geo-mean | Median   | [Min, Max]           |
+| ---------------------------- | -------- | ------------------------------------------------- | ------ | ---- | -------------------- | -------- | -------- | ------------ | -------- | -------------------- |
+| Single IV Infusion Dose (SD) | 300mg/m2 | AUC %Extrapolation Obs (%)                        | Female | 1    | 17.42 (-^b^)         | -^c^     | -^d^     | -^d^         | 17.42    | [17.42, 17.42]       |
+|                              |          |                                                   | Male   | 2    | 12.91 (2.776)        | 21.51    | 12.76    | 21.93        | 12.91    | [10.95, 14.87]       |
+|                              |          | AUC %Extrapolation Pred (%)                       | Female | 1    | 16.39 (-^b^)         | -^c^     | -^d^     | -^d^         | 16.39    | [16.39, 16.39]       |
+|                              |          |                                                   | Male   | 2    | 13.15 (2.584)        | 19.65    | 13.02    | 19.97        | 13.15    | [11.32, 14.98]       |
+|                              |          | AUC All (mg/L*h)                                  | Female | 1    | 19370 (-^b^)         | -^c^     | -^d^     | -^d^         | 19370    | [19370, 19370]       |
+|                              |          |                                                   | Male   | 2    | 35630 (5147)         | 14.45    | 35440    | 14.57        | 35630    | [31990, 39270]       |
+|                              |          | AUC Infinity Obs (mg/L*h)                         | Female | 1    | 23450 (-^b^)         | -^c^     | -^d^     | -^d^         | 23450    | [23450, 23450]       |
+|                              |          |                                                   | Male   | 2    | 41020 (7218)         | 17.59    | 40700    | 17.82        | 41020    | [35920, 46130]       |
+|                              |          | AUC Infinity Obs Norm by Dose (mg/L*h/mg)         | Female | 1    | 43.43 (-^b^)         | -^c^     | -^d^     | -^d^         | 43.43    | [43.43, 43.43]       |
+|                              |          |                                                   | Male   | 2    | 66.45 (4.859)        | 7.313    | 66.36    | 7.329        | 66.45    | [63.02, 69.89]       |
+|                              |          | AUC Infinity Pred (mg/L*h)                        | Female | 1    | 23160 (-^b^)         | -^c^     | -^d^     | -^d^         | 23160    | [23160, 23160]       |
+|                              |          |                                                   | Male   | 2    | 41130 (7150)         | 17.38    | 40820    | 17.61        | 41130    | [36070, 46180]       |
+|                              |          | AUC Infinity Pred Norm by Dose (mg/L*h/mg)        | Female | 1    | 42.89 (-^b^)         | -^c^     | -^d^     | -^d^         | 42.89    | [42.89, 42.89]       |
+|                              |          |                                                   | Male   | 2    | 66.63 (4.731)        | 7.1      | 66.55    | 7.115        | 66.63    | [63.28, 69.98]       |
+|                              |          | AUC to Last Nonzero Conc (mg/L*h)                 | Female | 1    | 19370 (-^b^)         | -^c^     | -^d^     | -^d^         | 19370    | [19370, 19370]       |
+|                              |          |                                                   | Male   | 2    | 35630 (5147)         | 14.45    | 35440    | 14.57        | 35630    | [31990, 39270]       |
+|                              |          | AUC to Last Nonzero Conc Norm by Dose (mg/L*h/mg) | Female | 1    | 35.87 (-^b^)         | -^c^     | -^d^     | -^d^         | 35.87    | [35.87, 35.87]       |
+|                              |          |                                                   | Male   | 2    | 57.81 (2.387)        | 4.13     | 57.78    | 4.133        | 57.81    | [56.12, 59.5]        |
+|                              |          | Half-Life Lambda z (h)                            | Female | 1    | 399 (-^b^)           | -^c^     | -^d^     | -^d^         | 399      | [399, 399]           |
+|                              |          |                                                   | Male   | 2    | 345.6 (40.67)        | 11.77    | 344.4    | 11.83        | 345.6    | [316.9, 374.4]       |
+|                              |          | Last Nonzero Conc (mg/L)                          | Female | 1    | 7.1 (-^b^)           | -^c^     | -^d^     | -^d^         | 7.1      | [7.1, 7.1]           |
+|                              |          |                                                   | Male   | 2    | 10.65 (2.899)        | 27.22    | 10.45    | 28.1         | 10.65    | [8.6, 12.7]          |
+|                              |          | Last Nonzero Conc Pred (mg/L)                     | Female | 1    | 6.594 (-^b^)         | -^c^     | -^d^     | -^d^         | 6.594    | [6.594, 6.594]       |
+|                              |          |                                                   | Male   | 2    | 10.87 (2.737)        | 25.19    | 10.7     | 25.88        | 10.87    | [8.933, 12.8]        |
+|                              |          | Max Conc (mg/L)                                   | Female | 1    | 75.4 (-^b^)          | -^c^     | -^d^     | -^d^         | 75.4     | [75.4, 75.4]         |
+|                              |          |                                                   | Male   | 2    | 126 (44.05)          | 34.95    | 122.1    | 36.85        | 126      | [94.9, 157.2]        |
+|                              |          | Max Conc Norm by Dose (mg/L/mg)                   | Female | 1    | 0.1396 (-^b^)        | -^c^     | -^d^     | -^d^         | 0.1396   | [0.1396, 0.1396]     |
+|                              |          |                                                   | Male   | 2    | 0.2023 (0.05069)     | 25.05    | 0.1991   | 25.73        | 0.2023   | [0.1665, 0.2382]     |
+|                              |          | Min Conc (mg/L)                                   | Female | 1    | 2.5 (-^b^)           | -^c^     | -^d^     | -^d^         | 2.5      | [2.5, 2.5]           |
+|                              |          |                                                   | Male   | 2    | 2.5 (0)              | 0        | 2.5      | 0            | 2.5      | [2.5, 2.5]           |
+|                              |          | Min Conc Norm by Dose (mg/L/mg)                   | Female | 1    | 0.00463 (-^b^)       | -^c^     | -^d^     | -^d^         | 0.00463  | [0.00463, 0.00463]   |
+|                              |          |                                                   | Male   | 2    | 0.004087 (0.0004229) | 10.35    | 0.004076 | 10.39        | 0.004087 | [0.003788, 0.004386] |
+|                              |          | Number of Points for Lambda z (-)                 | Female | 1    | 5 (-^b^)             | -^c^     | -^d^     | -^d^         | 5        | [5, 5]               |
+|                              |          |                                                   | Male   | 2    | 4 (1.414)            | 35.36    | 3.873    | 37.33        | 4        | [3, 5]               |
+|                              |          | R Squared Adjusted (-)                            | Female | 1    | 0.9705 (-^b^)        | -^c^     | -^d^     | -^d^         | 0.9705   | [0.9705, 0.9705]     |
+|                              |          |                                                   | Male   | 2    | 0.9909 (0.0097)      | 0.9789   | 0.9909   | 0.9789       | 0.9909   | [0.9841, 0.9978]     |
+|                              |          | Span (-)                                          | Female | 1    | 2.105 (-^b^)         | -^c^     | -^d^     | -^d^         | 2.105    | [2.105, 2.105]       |
+|                              |          |                                                   | Male   | 2    | 2.182 (0.08694)      | 3.984    | 2.181    | 3.987        | 2.182    | [2.121, 2.244]       |
+|                              |          | Time of CMAX (h)                                  | Female | 1    | 2 (-^b^)             | -^c^     | -^d^     | -^d^         | 2        | [2, 2]               |
+|                              |          |                                                   | Male   | 2    | 5 (4.243)            | 84.85    | 4        | 127          | 5        | [2, 8]               |
+|                              |          | Time of CMIN Observation (h)                      | Female | 1    | 0 (-^b^)             | -^c^     | -^d^     | -^d^         | 0        | [0, 0]               |
+|                              |          |                                                   | Male   | 2    | 0 (0)                | -^c^     | -^d^     | -^d^         | 0        | [0, 0]               |
+|                              |          | Time of Last Nonzero Conc (h)                     | Female | 1    | 1008 (-^b^)          | -^c^     | -^d^     | -^d^         | 1008     | [1008, 1008]         |
+|                              |          |                                                   | Male   | 2    | 1008 (0)             | 0        | 1008     | 0            | 1008     | [1008, 1008]         |
+|                              |          | Total CL Obs (L/h)                                | Female | 1    | 0.02302 (-^b^)       | -^c^     | -^d^     | -^d^         | 0.02302  | [0.02302, 0.02302]   |
+|                              |          |                                                   | Male   | 2    | 0.01509 (0.001103)   | 7.313    | 0.01507  | 7.329        | 0.01509  | [0.01431, 0.01587]   |
+|                              |          | Total CL Pred (L/h)                               | Female | 1    | 0.02331 (-^b^)       | -^c^     | -^d^     | -^d^         | 0.02331  | [0.02331, 0.02331]   |
+|                              |          |                                                   | Male   | 2    | 0.01505 (0.001068)   | 7.1      | 0.01503  | 7.115        | 0.01505  | [0.01429, 0.0158]    |
+|                              |          | Vol Dist Steady State Obs (L)                     | Female | 1    | 12.65 (-^b^)         | -^c^     | -^d^     | -^d^         | 12.65    | [12.65, 12.65]       |
+|                              |          |                                                   | Male   | 2    | 7.403 (0.1004)       | 1.357    | 7.403    | 1.357        | 7.403    | [7.332, 7.474]       |
+|                              |          | Vol Dist Steady State Pred (L)                    | Female | 1    | 12.51 (-^b^)         | -^c^     | -^d^     | -^d^         | 12.51    | [12.51, 12.51]       |
+|                              |          |                                                   | Male   | 2    | 7.425 (0.08125)      | 1.094    | 7.425    | 1.094        | 7.425    | [7.368, 7.483]       |
+|                              |          | Vz Obs (L)                                        | Female | 1    | 13.25 (-^b^)         | -^c^     | -^d^     | -^d^         | 13.25    | [13.25, 13.25]       |
+|                              |          |                                                   | Male   | 2    | 7.492 (0.3351)       | 4.473    | 7.488    | 4.477        | 7.492    | [7.255, 7.729]       |
+|                              |          | Vz Pred (L)                                       | Female | 1    | 13.42 (-^b^)         | -^c^     | -^d^     | -^d^         | 13.42    | [13.42, 13.42]       |
+|                              |          |                                                   | Male   | 2    | 7.472 (0.3501)       | 4.685    | 7.467    | 4.69         | 7.472    | [7.224, 7.719]       |
+{^a^ Number depends on (reliably) calculated parameters.<br>CV%% = coefficient of variation (%%)=SD/mean*100.<br>Geo-mean: Geometric mean.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1))*100.<br>^b^ SD not presented when N=1.<br>^c^ CV%% mean not presented when the mean is 0 or N=1.<br>^d^ Geo-mean and CV%% geo-mean not presented when the minimum value is zero or N=1.<br>Values in table are reported with 4 significant digits.<br>IQRnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/table_bygroup_PKparam.rmd<br>Execution date: 2022-06-22 14:22:32}
+!BLOCKEND(tableparampk1_1x1)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](tableparampk1_1x2)
+**Table 2.2-1-2 Summary statistics for PK parameters by dose group of Plasma Drug B (Drug B) - Single IV Infusion Dose (SD) (stratified by SEX)**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile                      | Group    | Name (Unit)                                       | SEX    | N^a^ | Mean (SD)       | CV% mean | Geo-mean | CV% geo-mean | Median   | [Min, Max]           |
+| ---------------------------- | -------- | ------------------------------------------------- | ------ | ---- | --------------- | -------- | -------- | ------------ | -------- | -------------------- |
+| Single IV Infusion Dose (SD) | 400mg/m2 | AUC %Extrapolation Obs (%)                        | Female | 1    | 13.42 (-^b^)    | -^c^     | -^d^     | -^d^         | 13.42    | [13.42, 13.42]       |
+|                              |          |                                                   | Male   | 1    | 3.876 (-^b^)    | -^c^     | -^d^     | -^d^         | 3.876    | [3.876, 3.876]       |
+|                              |          | AUC %Extrapolation Pred (%)                       | Female | 1    | 13.15 (-^b^)    | -^c^     | -^d^     | -^d^         | 13.15    | [13.15, 13.15]       |
+|                              |          |                                                   | Male   | 1    | 5.196 (-^b^)    | -^c^     | -^d^     | -^d^         | 5.196    | [5.196, 5.196]       |
+|                              |          | AUC All (mg/L*h)                                  | Female | 1    | 31200 (-^b^)    | -^c^     | -^d^     | -^d^         | 31200    | [31200, 31200]       |
+|                              |          |                                                   | Male   | 1    | 38880 (-^b^)    | -^c^     | -^d^     | -^d^         | 38880    | [38880, 38880]       |
+|                              |          | AUC Infinity Obs (mg/L*h)                         | Female | 1    | 33410 (-^b^)    | -^c^     | -^d^     | -^d^         | 33410    | [33410, 33410]       |
+|                              |          |                                                   | Male   | 1    | 40440 (-^b^)    | -^c^     | -^d^     | -^d^         | 40440    | [40440, 40440]       |
+|                              |          | AUC Infinity Obs Norm by Dose (mg/L*h/mg)         | Female | 1    | 38.58 (-^b^)    | -^c^     | -^d^     | -^d^         | 38.58    | [38.58, 38.58]       |
+|                              |          |                                                   | Male   | 1    | 54.07 (-^b^)    | -^c^     | -^d^     | -^d^         | 54.07    | [54.07, 54.07]       |
+|                              |          | AUC Infinity Pred (mg/L*h)                        | Female | 1    | 33310 (-^b^)    | -^c^     | -^d^     | -^d^         | 33310    | [33310, 33310]       |
+|                              |          |                                                   | Male   | 1    | 41010 (-^b^)    | -^c^     | -^d^     | -^d^         | 41010    | [41010, 41010]       |
+|                              |          | AUC Infinity Pred Norm by Dose (mg/L*h/mg)        | Female | 1    | 38.46 (-^b^)    | -^c^     | -^d^     | -^d^         | 38.46    | [38.46, 38.46]       |
+|                              |          |                                                   | Male   | 1    | 54.82 (-^b^)    | -^c^     | -^d^     | -^d^         | 54.82    | [54.82, 54.82]       |
+|                              |          | AUC to Last Nonzero Conc (mg/L*h)                 | Female | 1    | 28930 (-^b^)    | -^c^     | -^d^     | -^d^         | 28930    | [28930, 28930]       |
+|                              |          |                                                   | Male   | 1    | 38880 (-^b^)    | -^c^     | -^d^     | -^d^         | 38880    | [38880, 38880]       |
+|                              |          | AUC to Last Nonzero Conc Norm by Dose (mg/L*h/mg) | Female | 1    | 33.41 (-^b^)    | -^c^     | -^d^     | -^d^         | 33.41    | [33.41, 33.41]       |
+|                              |          |                                                   | Male   | 1    | 51.97 (-^b^)    | -^c^     | -^d^     | -^d^         | 51.97    | [51.97, 51.97]       |
+|                              |          | Half-Life Lambda z (h)                            | Female | 1    | 230.2 (-^b^)    | -^c^     | -^d^     | -^d^         | 230.2    | [230.2, 230.2]       |
+|                              |          |                                                   | Male   | 1    | 241.4 (-^b^)    | -^c^     | -^d^     | -^d^         | 241.4    | [241.4, 241.4]       |
+|                              |          | Last Nonzero Conc (mg/L)                          | Female | 1    | 13.5 (-^b^)     | -^c^     | -^d^     | -^d^         | 13.5     | [13.5, 13.5]         |
+|                              |          |                                                   | Male   | 1    | 4.5 (-^b^)      | -^c^     | -^d^     | -^d^         | 4.5      | [4.5, 4.5]           |
+|                              |          | Last Nonzero Conc Pred (mg/L)                     | Female | 1    | 13.19 (-^b^)    | -^c^     | -^d^     | -^d^         | 13.19    | [13.19, 13.19]       |
+|                              |          |                                                   | Male   | 1    | 6.117 (-^b^)    | -^c^     | -^d^     | -^d^         | 6.117    | [6.117, 6.117]       |
+|                              |          | Max Conc (mg/L)                                   | Female | 1    | 166.4 (-^b^)    | -^c^     | -^d^     | -^d^         | 166.4    | [166.4, 166.4]       |
+|                              |          |                                                   | Male   | 1    | 145.8 (-^b^)    | -^c^     | -^d^     | -^d^         | 145.8    | [145.8, 145.8]       |
+|                              |          | Max Conc Norm by Dose (mg/L/mg)                   | Female | 1    | 0.1921 (-^b^)   | -^c^     | -^d^     | -^d^         | 0.1921   | [0.1921, 0.1921]     |
+|                              |          |                                                   | Male   | 1    | 0.1949 (-^b^)   | -^c^     | -^d^     | -^d^         | 0.1949   | [0.1949, 0.1949]     |
+|                              |          | Min Conc (mg/L)                                   | Female | 1    | 0 (-^b^)        | -^c^     | -^d^     | -^d^         | 0        | [0, 0]               |
+|                              |          |                                                   | Male   | 1    | 2.5 (-^b^)      | -^c^     | -^d^     | -^d^         | 2.5      | [2.5, 2.5]           |
+|                              |          | Min Conc Norm by Dose (mg/L/mg)                   | Female | 1    | 0 (-^b^)        | -^c^     | -^d^     | -^d^         | 0        | [0, 0]               |
+|                              |          |                                                   | Male   | 1    | 0.003342 (-^b^) | -^c^     | -^d^     | -^d^         | 0.003342 | [0.003342, 0.003342] |
+|                              |          | Number of Points for Lambda z (-)                 | Female | 1    | 7 (-^b^)        | -^c^     | -^d^     | -^d^         | 7        | [7, 7]               |
+|                              |          |                                                   | Male   | 1    | 8 (-^b^)        | -^c^     | -^d^     | -^d^         | 8        | [8, 8]               |
+|                              |          | R Squared Adjusted (-)                            | Female | 1    | 0.9932 (-^b^)   | -^c^     | -^d^     | -^d^         | 0.9932   | [0.9932, 0.9932]     |
+|                              |          |                                                   | Male   | 1    | 0.9458 (-^b^)   | -^c^     | -^d^     | -^d^         | 0.9458   | [0.9458, 0.9458]     |
+|                              |          | Span (-)                                          | Female | 1    | 2.815 (-^b^)    | -^c^     | -^d^     | -^d^         | 2.815    | [2.815, 2.815]       |
+|                              |          |                                                   | Male   | 1    | 4.142 (-^b^)    | -^c^     | -^d^     | -^d^         | 4.142    | [4.142, 4.142]       |
+|                              |          | Time of CMAX (h)                                  | Female | 1    | 2 (-^b^)        | -^c^     | -^d^     | -^d^         | 2        | [2, 2]               |
+|                              |          |                                                   | Male   | 1    | 2 (-^b^)        | -^c^     | -^d^     | -^d^         | 2        | [2, 2]               |
+|                              |          | Time of CMIN Observation (h)                      | Female | 1    | 1008 (-^b^)     | -^c^     | -^d^     | -^d^         | 1008     | [1008, 1008]         |
+|                              |          |                                                   | Male   | 1    | 0 (-^b^)        | -^c^     | -^d^     | -^d^         | 0        | [0, 0]               |
+|                              |          | Time of Last Nonzero Conc (h)                     | Female | 1    | 672 (-^b^)      | -^c^     | -^d^     | -^d^         | 672      | [672, 672]           |
+|                              |          |                                                   | Male   | 1    | 1008 (-^b^)     | -^c^     | -^d^     | -^d^         | 1008     | [1008, 1008]         |
+|                              |          | Total CL Obs (L/h)                                | Female | 1    | 0.02592 (-^b^)  | -^c^     | -^d^     | -^d^         | 0.02592  | [0.02592, 0.02592]   |
+|                              |          |                                                   | Male   | 1    | 0.0185 (-^b^)   | -^c^     | -^d^     | -^d^         | 0.0185   | [0.0185, 0.0185]     |
+|                              |          | Total CL Pred (L/h)                               | Female | 1    | 0.026 (-^b^)    | -^c^     | -^d^     | -^d^         | 0.026    | [0.026, 0.026]       |
+|                              |          |                                                   | Male   | 1    | 0.01824 (-^b^)  | -^c^     | -^d^     | -^d^         | 0.01824  | [0.01824, 0.01824]   |
+|                              |          | Vol Dist Steady State Obs (L)                     | Female | 1    | 8.527 (-^b^)    | -^c^     | -^d^     | -^d^         | 8.527    | [8.527, 8.527]       |
+|                              |          |                                                   | Male   | 1    | 6.557 (-^b^)    | -^c^     | -^d^     | -^d^         | 6.557    | [6.557, 6.557]       |
+|                              |          | Vol Dist Steady State Pred (L)                    | Female | 1    | 8.499 (-^b^)    | -^c^     | -^d^     | -^d^         | 8.499    | [8.499, 8.499]       |
+|                              |          |                                                   | Male   | 1    | 6.718 (-^b^)    | -^c^     | -^d^     | -^d^         | 6.718    | [6.718, 6.718]       |
+|                              |          | Vz Obs (L)                                        | Female | 1    | 8.608 (-^b^)    | -^c^     | -^d^     | -^d^         | 8.608    | [8.608, 8.608]       |
+|                              |          |                                                   | Male   | 1    | 6.442 (-^b^)    | -^c^     | -^d^     | -^d^         | 6.442    | [6.442, 6.442]       |
+|                              |          | Vz Pred (L)                                       | Female | 1    | 8.635 (-^b^)    | -^c^     | -^d^     | -^d^         | 8.635    | [8.635, 8.635]       |
+|                              |          |                                                   | Male   | 1    | 6.354 (-^b^)    | -^c^     | -^d^     | -^d^         | 6.354    | [6.354, 6.354]       |
+{^a^ Number depends on (reliably) calculated parameters.<br>CV%% = coefficient of variation (%%)=SD/mean*100.<br>Geo-mean: Geometric mean.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1))*100.<br>^b^ SD not presented when N=1.<br>^c^ CV%% mean not presented when the mean is 0 or N=1.<br>^d^ Geo-mean and CV%% geo-mean not presented when the minimum value is zero or N=1.<br>Values in table are reported with 4 significant digits.<br>IQRnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/table_bygroup_PKparam.rmd<br>Execution date: 2022-06-22 14:22:32}
+!BLOCKEND(tableparampk1_1x2)
+
+

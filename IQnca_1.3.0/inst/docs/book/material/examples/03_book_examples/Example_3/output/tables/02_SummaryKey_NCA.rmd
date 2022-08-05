@@ -1,0 +1,35 @@
+
+!LANDSCAPE
+
+
+#* Summary statistics for PK parameters by dose group
+!BLOCKSTART[keepNext](tableparampk1_1x1)
+**Summary statistics for PK parameters by dose group of Plasma C (C) - First dose**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile    | Group        | Name (Unit)                       | N^a^ | Mean (SD)        | CV% mean | Geo-mean | CV% geo-mean | Median  | [Min, Max]        |
+| ---------- | ------------ | --------------------------------- | ---- | ---------------- | -------- | -------- | ------------ | ------- | ----------------- |
+| First dose | 10mg_OD_Oral | AUC Over Dosing Interval (ug/L*h) | 9    | 1357 (226)       | 16.66    | 1340     | 16.94        | 1331    | [1054, 1699]      |
+|            |              | Lambda z (1/h)                    | 9    | 0.11 (0.03342)   | 30.37    | 0.1061   | 28.53        | 0.09623 | [0.08117, 0.1779] |
+|            |              | Max Conc (ug/L)                   | 10   | 111 (24.21)      | 21.8     | 108.3    | 25.07        | 113.2   | [62.33, 138.3]    |
+|            |              | R Squared Adjusted (-)            | 9    | 0.9842 (0.01379) | 1.401    | 0.9842   | 1.411        | 0.9893  | [0.9559, 0.999]   |
+|            |              | Time of CMAX (h)                  | 10   | 3.2 (1.932)      | 60.38    | 2.828    | 52.11        | 2       | [2, 8]            |
+{^a^ Number depends on (reliably) calculated parameters.<br>CV%% = coefficient of variation (%%)=SD/mean*100.<br>Geo-mean: Geometric mean.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1))*100.<br>^b^ SD not presented when N=1.<br>^c^ CV%% mean not presented when the mean is 0 or N=1.<br>^d^ Geo-mean and CV%% geo-mean not presented when the minimum value is zero or N=1.<br>Values in table are reported with 4 significant digits.<br>IQRnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/02_SummaryKey_NCA.rmd<br>Execution date: 2022-06-22 14:23:11}
+!BLOCKEND(tableparampk1_1x1)
+
+
+!NEWPAGE
+
+!BLOCKSTART[keepNext](tableparampk1_2x1)
+**Summary statistics for PK parameters by dose group of Plasma C (C) - Steady-state dose**
+!TABINLINE[size:8,ignoreCaption:true,valueTable:false]
+| Profile           | Group        | Name (Unit)                       | N^a^ | Mean (SD)          | CV% mean | Geo-mean | CV% geo-mean | Median  | [Min, Max]          |
+| ----------------- | ------------ | --------------------------------- | ---- | ------------------ | -------- | -------- | ------------ | ------- | ------------------- |
+| Steady-state dose | 10mg_OD_Oral | AUC Over Dosing Interval (ug/L*h) | 9    | 1805 (340)         | 18.84    | 1774     | 20.07        | 1869    | [1246, 2294]        |
+|                   |              | Lambda z (1/h)                    | 9    | 0.01803 (0.007608) | 42.19    | 0.01677  | 41.35        | 0.01546 | [0.009292, 0.03146] |
+|                   |              | Max Conc (ug/L)                   | 10   | 133.7 (24.57)      | 18.38    | 131.6    | 18.83        | 131.4   | [92.84, 179.5]      |
+|                   |              | R Squared Adjusted (-)            | 9    | 0.9712 (0.03445)   | 3.547    | 0.9707   | 3.59         | 0.9866  | [0.9217, 0.9997]    |
+|                   |              | Time of CMAX (h)                  | 10   | 3.6 (0.8433)       | 23.42    | 3.482    | 29.86        | 4       | [2, 4]              |
+{^a^ Number depends on (reliably) calculated parameters.<br>CV%% = coefficient of variation (%%)=SD/mean*100.<br>Geo-mean: Geometric mean.<br>CV%% geo-mean=(sqrt (exp (variance for log transformed data)-1))*100.<br>^b^ SD not presented when N=1.<br>^c^ CV%% mean not presented when the mean is 0 or N=1.<br>^d^ Geo-mean and CV%% geo-mean not presented when the minimum value is zero or N=1.<br>Values in table are reported with 4 significant digits.<br>IQRnca version: 1.2.0<br>Script: compliance<br>Output: output/tables/02_SummaryKey_NCA.rmd<br>Execution date: 2022-06-22 14:23:11}
+!BLOCKEND(tableparampk1_2x1)
+
+
